@@ -1,4 +1,5 @@
 import { Fragment } from "react";
+import { IoChevronDownSharp } from "react-icons/io5";
 import { InputSearch } from "../pure/InputSearch";
 import { NavLinks } from "./NavLinks";
 import { Menu, Transition } from "@headlessui/react";
@@ -34,8 +35,9 @@ export const NavBarSecondary = () => {
         <div className="block xl:hidden">
           <Menu as="div" className="relative inline-block text-right">
             <div>
-              <Menu.Button className="inline-flex w-full justify-center rounded-md bg-black/20 px-4 py-2 text-sm font-medium text-white hover:bg-black/30 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/75">
+              <Menu.Button className="flex gap-2 w-full justify-center items-center px-4 py-2 text-sm text-white menu-dropdown">
                 Discover
+                <IoChevronDownSharp className="text-lg icon-dropdown" />
               </Menu.Button>
             </div>
             <Transition

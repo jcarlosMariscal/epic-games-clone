@@ -1,3 +1,12 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.menu-dropdown .icon-dropdown {
+  transition: transform 0.2s ease-in-out;
+}
+.menu-dropdown:hover .icon-dropdown {
+  opacity: 0.8;
+  transform: translateY(0.2rem);
+  transition: transform 0.2s ease-in-out;
+}
