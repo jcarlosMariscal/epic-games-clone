@@ -14,7 +14,7 @@ export const LinkComponent = ({ to, size, className, children }: Link) => {
   return (
     <a
       href={to}
-      className={`${className} ${cssSize} flex items-center justify-center opacity-80 hover:opacity-100 transition ease-in-out delay-100`}
+      className={`${cssSize} ${className} flex items-center justify-center opacity-80 hover:opacity-100`}
     >
       {children}
     </a>
