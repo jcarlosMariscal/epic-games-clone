@@ -10,3 +10,21 @@
   transform: translateY(0.2rem);
   transition: transform 0.2s ease-in-out;
 }
+
+.bg-control {
+  width: 0;
+}
+.bg-control.control-active {
+  /* width: 100%; */
+  /* background: aqua; */
+  animation: slideBackground 7000ms linear forwards;
+}
+
+@keyframes slideBackground {
+  /* from { */
+  /* background-position: 0% 0; Comienza desde la izquierda */
+  /* } */
+  to {
+    width: 100%; /* Termina en la derecha */
+  }
+}

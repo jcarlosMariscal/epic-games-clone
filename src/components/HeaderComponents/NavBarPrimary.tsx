@@ -36,7 +36,7 @@ export const NavBarPrimary = () => {
           />
           <IoChevronDownSharp className="text-md opacity-70" />
         </button> */}
-        <Menu as="div" className="relative inline-block text-right z-10">
+        <Menu as="div" className="relative inline-block text-right z-50">
           <div>
             <Menu.Button className="flex w-auto justify-between text-sm items-center gap-5 text-white menu-dropdown">
               <img

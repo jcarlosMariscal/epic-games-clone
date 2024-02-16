@@ -22,7 +22,7 @@ const navigation = [
 ];
 export const NavBarSecondary = () => {
   return (
-    <div className="bg-epic-black text-white h-24 w-full flex justify-center">
+    <div className="bg-epic-black text-white h-24 w-full flex justify-center sticky top-0 z-40">
       <div className="w-9/12 flex items-center gap-3">
         <InputSearch
           placeholder="Search Store"
