@@ -1,5 +1,6 @@
 import { IGameCarousel } from "../../data/gameList";
 import { FaPlus } from "react-icons/fa6";
+import { CarouselContentInfo } from "./CarouselContentInfo";
 type CarouselProps = {
   images: IGameCarousel[];
   currentIndex: number;
@@ -12,51 +13,23 @@ export const CarouselContent = ({
 }: // prevSlide,
 // nextSlide,
 CarouselProps) => {
+  const translateX = `translateX(-${currentIndex * (100 / images.length)}%)`;
   return (
-    <div className="relative overflow-hidden w-full h-full">
+    <div className="relative overflow-hidden size-full">
       <div
-        className="flex gap-6 md:gap-0 transition-transform duration-300 ease-in-out transform w-full"
-        style={{
-          width: `${images.length * 100}%`,
-          transform: `translateX(-${currentIndex * (100 / images.length)}%)`,
-        }}
+        className={`flex gap-6 md:gap-0 transition-300 w-[600%]`}
+        style={{ transform: translateX }}
       >
         {images.map((item: IGameCarousel, index: number) => (
           <>
             <div
               key={index}
-              className="hidden md:block w-[100%] h-[20rem] xl:w-[58rem] md:h-[25rem] customMd:h-[27.5rem] lg:h-[23rem] xl:h-[29rem] rounded-md bg-center bg-cover relative"
+              className="hidden md:block carousel-content background-image relative"
               style={{
                 backgroundImage: `url(${item.images.image})`,
               }}
             >
-              <a className="absolute left-0 top-0 w-full h-full">
-                <div className="w-6/12 h-full p-7 flex flex-col-reverse">
-                  <div className="w-full flex gap-1 mt-4">
-                    {item.buttonOne && (
-                      <a className="w-[9rem] h-12 bg-white text-epic-black text-sm flex items-center justify-center cursor-pointer rounded-md">
-                        {item.buttonOne}
-                      </a>
-                    )}
-                    {item.buttonTwo && (
-                      <a className="w-[9rem] text-[.6rem] h-12 text-white cursor-pointer rounded-md relative last:hover:bg-white last:hover:bg-opacity-40 font-bold">
-                        <div className="z-20 absolute left-0 top-0 w-full h-full flex items-center justify-center">
-                          <FaPlus className="mx-1 size-6 p-1 text-sm bg-epic-black rounded-full border-2 text-white border-white" />
-                          {item.buttonTwo}
-                        </div>
-                        <div className="z-10 absolute left-0 top-0 w-full h-full"></div>
-                      </a>
-                    )}
-                  </div>
-                  {item.price && <p className="font-bold mt-6">{item.price}</p>}
-                  <p className="font-bold">{item.description}</p>
-                  <p className="font-bold mt-6">{item.status}</p>
-                  <img
-                    className="w-60 h-auto bg-no-repeat pointer-events-none"
-                    src={item.images.logo}
-                  ></img>
-                </div>
-              </a>
+              <CarouselContentInfo game={item} />
             </div>
             <div
               key={index}

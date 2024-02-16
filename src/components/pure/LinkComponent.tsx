@@ -6,15 +6,24 @@ type Link = {
   className: string;
   children: string | ReactNode;
 };
+type Style = {
+  sizes: {
+    [key: string]: string; // Índice de tipo string con valor de tipo string
+  };
+};
 export const LinkComponent = ({ to, size, className, children }: Link) => {
-  const cssSize =
-    size === "sm"
-      ? "rounded-full size-8"
-      : "px-5 py-[.4rem] rounded-md text-sm";
+  const style: Style = {
+    sizes: {
+      xs: "size-8 rounded-full opacity-80",
+      sm: "w-auto h-8 rounded-md",
+      lg: "w-[150px] h-[3.4rem] rounded-md opacity-100",
+      logo: "w-[3.8rem]",
+    },
+  };
   return (
     <a
       href={to}
-      className={`${cssSize} ${className} flex items-center justify-center opacity-80 hover:opacity-100`}
+      className={`${style.sizes[size]} ${className} flex-center btn-transition`}
     >
       {children}
     </a>

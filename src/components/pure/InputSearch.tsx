@@ -11,7 +11,7 @@ export const InputSearch = ({ placeholder, size, className }: InputSearch) => {
       <input
         type="text"
         placeholder={placeholder}
-        className={`pl-10 outline-none rounded-full ${size} ${className} text-sm text-white`}
+        className={`pl-10 outline-none rounded-full ${size} ${className} text-xs text-white`}
       />
       <div className="absolute text-white top-0 bottom-0 left-3 flex items-center">
         <IoSearchOutline className="text-sm" />

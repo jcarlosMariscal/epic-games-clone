@@ -3,18 +3,23 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {},
+    fontFamily: {
+      inter: ["Inter", "sans-serif"],
+    },
     colors: {
       white: "#f5f5f5",
       transparent: "transparent",
       epic: {
-        black: "#121212",
+        black: "rgb(18,18,18)",
         gray: {
-          50: "#2F2F2F",
-          100: "#2A2A2A",
-          200: "#202020",
+          50: "#404044",
+          // 100: "#2F2F2F",
+          100: "#202020",
+          200: "#303034",
+          300: "#18181C",
         },
         blue: {
-          50: "#26bbff",
+          50: "#61CDFF",
           100: "#007DFC",
         },
       },

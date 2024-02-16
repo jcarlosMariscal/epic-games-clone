@@ -26,12 +26,12 @@ export const CarouselComponent = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       changeSlide();
-    }, 7000); // 7000 milisegundos = 7 segundos
+    }, 7000);
     return () => clearTimeout(timer);
   }, [currentIndex]);
   return (
-    <div className="my-1 flex flex-col md:grid md:grid-cols-10 gap-5 h-auto">
-      <div className="col-span-7 md:col-span-8 h-full">
+    <div className="my-1 flex flex-col md:grid md:grid-cols-10 gap-5">
+      <div className="col-span-7 md:col-span-8">
         <CarouselContent
           images={gameCarousel}
           currentIndex={currentIndex}

@@ -1,12 +1,48 @@
 @tailwind base;
 @tailwind components;
-@tailwind utilities;
 
+@layer components {
+  .background-dark {
+    @apply bg-epic-black text-white;
+  }
+  .background-gray {
+    @apply bg-epic-gray-300 text-white;
+  }
+  .background-image {
+    @apply bg-no-repeat bg-center bg-cover;
+  }
+  .flex-center {
+    @apply flex justify-center items-center;
+  }
+  .main-content {
+    @apply w-[88vw] md:w-[95vw] lg:w-9/12;
+  }
+  .transition-300 {
+    @apply transition-transform duration-300 ease-in-out;
+  }
+  .btn-transition {
+    @apply transition ease-out delay-100;
+  }
+  .carousel-content {
+    @apply w-[100%] h-[20rem] xl:w-[58rem] md:h-[25rem] customMd:h-[27.5rem] lg:h-[23rem] xl:h-[29rem] rounded-md;
+  }
+  .absolute-full {
+    @apply absolute left-0 top-0 size-full;
+  }
+  .epicgames-dropdown {
+    @apply absolute left-0 top-14 mt-2 w-80 xl:w-[38rem] origin-top-right rounded-lg;
+  }
+  .opacity-text {
+    @apply text-white text-opacity-60 hover:text-opacity-100;
+  }
+}
+@tailwind utilities;
 .menu-dropdown .icon-dropdown {
+  opacity: 0.8;
   transition: transform 0.2s ease-in-out;
 }
 .menu-dropdown:hover .icon-dropdown {
-  opacity: 0.8;
+  opacity: 1;
   transform: translateY(0.2rem);
   transition: transform 0.2s ease-in-out;
 }
@@ -15,15 +51,10 @@
   width: 0;
 }
 .bg-control.control-active {
-  /* width: 100%; */
-  /* background: aqua; */
   animation: slideBackground 7000ms linear forwards;
 }
 
 @keyframes slideBackground {
-  /* from { */
-  /* background-position: 0% 0; Comienza desde la izquierda */
-  /* } */
   to {
     width: 100%; /* Termina en la derecha */
   }

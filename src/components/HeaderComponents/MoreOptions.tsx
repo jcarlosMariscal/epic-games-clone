@@ -1,29 +1,32 @@
 import { ButtonComponent } from "../pure/ButtonComponent";
-import { TbWorld } from "react-icons/tb";
+import { FiGlobe, FiUser } from "react-icons/fi";
 import { LinkComponent } from "../pure/LinkComponent";
-import { FiUser } from "react-icons/fi";
 
 export const MoreOptions = () => {
   const handleClick = () => {};
   return (
-    <div className="flex items-center gap-3">
+    <div className="flex-center gap-3.5">
       <ButtonComponent
         type="button"
-        className="bg-transparent"
+        className="text-xl text-white hover:opacity-100"
         id="1"
-        size="sm"
+        size="xs"
         onClick={handleClick}
       >
-        <TbWorld className="text-xl" />
+        <FiGlobe />
       </ButtonComponent>
-      <LinkComponent to="/" size="sm" className={`bg-epic-gray-50`}>
-        <FiUser className="text-md" />
+      <LinkComponent
+        to="/"
+        size="xs"
+        className={`bg-epic-gray-200 text-lg hover:opacity-100`}
+      >
+        <FiUser />
       </LinkComponent>
       <ButtonComponent
         type="button"
-        className="bg-epic-blue-50 text-epic-black"
+        className="bg-epic-blue-50 text-epic-black font-medium text-sm"
         id="1"
-        size="lg"
+        size="sm"
         onClick={handleClick}
       >
         Download

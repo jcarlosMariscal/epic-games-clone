@@ -6,7 +6,9 @@ import { HeaderComponent } from "./components/HeaderComponents/HeaderComponent.t
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
-    <HeaderComponent />
-    <HomePage />
+    <div className="font-inter">
+      <HeaderComponent />
+      <HomePage />
+    </div>
   </React.StrictMode>
 );

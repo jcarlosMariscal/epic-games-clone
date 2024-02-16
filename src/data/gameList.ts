@@ -23,7 +23,7 @@ import honkaiStarRailMobile from "@/assets/images/games/honkai-star-rail-version
 import outridersMobile from "@/assets/images/games/outriders-complete-edition-mobile.jpg";
 import homeworld3Mobile from "@/assets/images/games/homeworld-3-mobile.jpg";
 
-type Images = {
+export type Images = {
   image: string;
   thumb: string;
   logo: string;
@@ -138,7 +138,7 @@ export const gameCarousel: IGameCarousel[] = [
     description:
       "Tactical, beautiful, and wholly unique, the GOTY-winning sci-fi RTS returns with Homeworld 3.",
     price: "Starting at MX$999.99",
-    buttonOne: "BUY NOW",
+    buttonOne: "PRE PURCHASE NOW",
     buttonTwo: "ADD TO WISH LIST",
   },
 ];
