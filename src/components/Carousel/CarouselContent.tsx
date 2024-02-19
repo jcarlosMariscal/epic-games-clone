@@ -1,77 +1,49 @@
-import { IGameCarousel } from "../../data/gameList";
 import { FaPlus } from "react-icons/fa6";
-import { CarouselContentInfo } from "./CarouselContentInfo";
-type CarouselProps = {
-  images: IGameCarousel[];
-  currentIndex: number;
-  // prevSlide: () => void;
-  // nextSlide: () => void;
+import { IGameCarousel } from "../../data/gameList";
+import { ButtonComponent } from "../pure/ButtonComponent";
+
+type TGame = {
+  game: IGameCarousel;
 };
-export const CarouselContent = ({
-  images,
-  currentIndex,
-}: // prevSlide,
-// nextSlide,
-CarouselProps) => {
-  const translateX = `translateX(-${currentIndex * (100 / images.length)}%)`;
+export const CarouselContent = ({ game }: TGame) => {
+  const { status, description, price, buttonOne, buttonTwo, images } = game;
+  const { logo } = images;
+  const handleClick = () => {};
   return (
-    <div className="relative overflow-hidden size-full">
-      <div
-        className={`flex gap-6 md:gap-0 transition-300 w-[600%]`}
-        style={{ transform: translateX }}
-      >
-        {images.map((item: IGameCarousel, index: number) => (
-          <>
-            <div
-              key={index}
-              className="hidden md:block carousel-content background-image relative"
-              style={{
-                backgroundImage: `url(${item.images.image})`,
-              }}
+    <a className="absolute-full text-md">
+      <div className="absolute-full bg-epic-black opacity-40 z-10"></div>
+      <div className="absolute-full z-20">
+        <div className="w-4/6 h-full p-7 flex flex-col justify-end">
+          <img className="w-60 h-auto pointer-events-none" src={logo}></img>
+          <p className="mt-4">{status}</p>
+          <p className="mt-2">{description}</p>
+          {price && <p className="mt-6">{price}</p>}
+          <div className="flex gap-1 mt-2">
+            <ButtonComponent
+              type="button"
+              className="bg-white text-epic-black hover:text-opacity-80 text-xs"
+              id=""
+              size="lg"
+              onClick={handleClick}
             >
-              <CarouselContentInfo game={item} />
-            </div>
-            <div
-              key={index}
-              className="block md:hidden w-[26rem] h-[30rem] rounded-md bg-center bg-cover relative"
-              style={{
-                backgroundImage: `url(${item.images.mobile})`,
-              }}
-            >
-              <a className="absolute left-0 top-0 w-full h-full">
-                <div className="absolute top-1 right-1 flex gap-1 mt-4">
-                  {item.buttonTwo && (
-                    <a className="size-8 text-[.6rem] text-white cursor-pointer rounded-md relativ">
-                      <FaPlus className="size-6 p-1 text-sm bg-epic-black rounded-full border-2 text-white border-white" />
-                    </a>
-                  )}
-                </div>
-                <div className="w-full h-full p-7 flex flex-col justify-end">
-                  <img
-                    className="w-60 h-auto bg-no-repeat pointer-events-none"
-                    src={item.images.logo}
-                  ></img>
-                  <p className="font-bold mt-6">{item.status}</p>
-                  <p className="font-bold">{item.description}</p>
-                  {item.price && <p className="font-bold mt-6">{item.price}</p>}
-                </div>
-              </a>
-            </div>
-          </>
-        ))}
+              {buttonOne}
+            </ButtonComponent>
+            {buttonTwo && (
+              <ButtonComponent
+                type="button"
+                className="hover:text-opacity-80 text-[10px] relative last:hover:bg-white last:hover:bg-opacity-30"
+                id=""
+                size="lg"
+                hover={true}
+                onClick={handleClick}
+              >
+                <FaPlus className="mx-1 size-5 p-[.2rem] text-sm bg-epic-black rounded-full border-2 text-white border-white" />
+                {buttonTwo}
+              </ButtonComponent>
+            )}
+          </div>
+        </div>
       </div>
-      {/* <button
-          className="absolute top-1/2 left-4 transform -translate-y-1/2 bg-white text-epic-black px-3 py-1 rounded-full shadow-md"
-          onClick={prevSlide}
-        >
-          &#10094;
-        </button>
-        <button
-          className="absolute top-1/2 right-4 transform -translate-y-1/2 bg-white text-epic-black px-3 py-1 rounded-full shadow-md"
-          onClick={nextSlide}
-        >
-          &#10095;
-        </button> */}
-    </div>
+    </a>
   );
 };

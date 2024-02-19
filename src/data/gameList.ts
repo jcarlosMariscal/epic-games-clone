@@ -31,6 +31,7 @@ export type Images = {
 };
 
 export interface IGameCarousel {
+  id: number;
   title: string;
   images: Images;
   status: string;
@@ -40,6 +41,7 @@ export interface IGameCarousel {
   buttonTwo: string;
 }
 export interface IGame {
+  id: number;
   title: string;
   image: string;
   thumb: string;
@@ -53,6 +55,7 @@ export interface IGame {
 
 export const gameCarousel: IGameCarousel[] = [
   {
+    id: 1,
     title: "Skull and Bones",
     images: {
       image: skullAndBones,
@@ -68,6 +71,7 @@ export const gameCarousel: IGameCarousel[] = [
     buttonTwo: "ADD TO WISH LIST",
   },
   {
+    id: 2,
     title: "Banishers: Ghosts of New Eden",
     images: {
       image: banishers,
@@ -83,6 +87,7 @@ export const gameCarousel: IGameCarousel[] = [
     buttonTwo: "",
   },
   {
+    id: 3,
     title: "Prince of Persia The Lost Crown",
     images: {
       image: princeOfPersia,
@@ -98,6 +103,7 @@ export const gameCarousel: IGameCarousel[] = [
     buttonTwo: "ADD TO WISH LIST",
   },
   {
+    id: 4,
     title: "Honkai Star Rail",
     images: {
       image: honkaiStarRail,
@@ -112,6 +118,7 @@ export const gameCarousel: IGameCarousel[] = [
     buttonTwo: "ADD TO WISH LIST",
   },
   {
+    id: 5,
     title: "OUTRIDERS COMPLETE EDITION",
     images: {
       image: outriders,
@@ -127,6 +134,7 @@ export const gameCarousel: IGameCarousel[] = [
     buttonTwo: "ADD TO WISH LIST",
   },
   {
+    id: 6,
     title: "Homeworld 3",
     images: {
       image: homeworld3,
@@ -142,8 +150,13 @@ export const gameCarousel: IGameCarousel[] = [
     buttonTwo: "ADD TO WISH LIST",
   },
 ];
+
+export const gameCarouselDots = gameCarousel.map((game) => {
+  return { id: game.id, title: game.title, thumb: game.images.thumb };
+});
 const gameList: IGame[] = [
   {
+    id: 1,
     title: "skullAndBones",
     image: skullAndBones,
     thumb: skullAndBonesThumb,
@@ -156,6 +169,7 @@ const gameList: IGame[] = [
     discountPrice: "161.850",
   },
   {
+    id: 2,
     title: "Far Cry 6",
     image: banishers,
     thumb: banishersThumb,
@@ -166,6 +180,7 @@ const gameList: IGame[] = [
     studio: "Ubisoft",
   },
   {
+    id: 3,
     title: "Assassins Creeds Valhalla",
     image: princeOfPersia,
     thumb: princeOfPersiaThumb,
@@ -178,6 +193,7 @@ const gameList: IGame[] = [
     discountPrice: "161.850",
   },
   {
+    id: 4,
     title: "Little Nightmare",
     image: honkaiStarRail,
     thumb: honkaiStarRailThumb,
@@ -188,6 +204,7 @@ const gameList: IGame[] = [
     studio: "Tarsier Studios",
   },
   {
+    id: 5,
     title: "outriders 2042",
     image: outriders,
     thumb: outridersThumb,
@@ -198,6 +215,7 @@ const gameList: IGame[] = [
     studio: "Electronic Arts",
   },
   {
+    id: 6,
     title: "homeworld3 bridge of spirits",
     image: homeworld3,
     thumb: homeworld3Thumb,
@@ -211,34 +229,34 @@ const gameList: IGame[] = [
   },
 ];
 
-export const highlightGames = gameList.slice(0, 6);
+// export const highlightGames = gameList.slice(0, 6);
 
-export const dummyGameList = [
-  ...gameList,
-  ...gameList,
-  ...gameList,
-  ...gameList,
-];
+// export const dummyGameList = [
+//   ...gameList,
+//   ...gameList,
+//   ...gameList,
+//   ...gameList,
+// ];
 
-export const freeGames = [
-  {
-    title: "skullAndBones",
-    image: skullAndBones,
-    freeNow: true,
-    rangeDate: "Now - Oct 14 at 10:00 PM",
-  },
-  {
-    title: "Far Cry 6",
-    image: banishers,
-    freeNow: false,
-    rangeDate: "Oct 14 - Oct 21",
-  },
-  {
-    title: "Assassins Creeds Valhalla",
-    image: princeOfPersia,
-    freeNow: false,
-    rangeDate: "Oct 14 - Oct 21",
-  },
-];
+// export const freeGames = [
+//   {
+//     title: "skullAndBones",
+//     image: skullAndBones,
+//     freeNow: true,
+//     rangeDate: "Now - Oct 14 at 10:00 PM",
+//   },
+//   {
+//     title: "Far Cry 6",
+//     image: banishers,
+//     freeNow: false,
+//     rangeDate: "Oct 14 - Oct 21",
+//   },
+//   {
+//     title: "Assassins Creeds Valhalla",
+//     image: princeOfPersia,
+//     freeNow: false,
+//     rangeDate: "Oct 14 - Oct 21",
+//   },
+// ];
 
 export default gameList;

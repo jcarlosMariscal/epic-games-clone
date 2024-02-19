@@ -52,6 +52,12 @@ export default {
       "2xl": "1536px",
       // => @media (min-width: 1536px) { ... }
     },
+    keyframes: {
+      slideBgDot: {
+        "0%": { width: "0%" },
+        "100%": { width: "100%" },
+      },
+    },
   },
   plugins: [],
 };

@@ -35,6 +35,23 @@
   .opacity-text {
     @apply text-white text-opacity-60 hover:text-opacity-100;
   }
+
+  /* CAROUSEL SPECIAL DOTS  */
+  .dot-special {
+    @apply rounded-md cursor-pointer hover:bg-epic-gray-100 relative;
+  }
+  .dot-special-bg {
+    @apply hidden md:flex absolute-full p-2 md:items-center gap-3 z-20;
+  }
+  .dot-special-bg-anim {
+    @apply hidden md:block w-0 z-10 absolute-full rounded-md  bg-epic-gray-50;
+  }
+  .dot-special-img {
+    @apply h-10 w-8 xl:h-14 xl:w-10 rounded-md;
+  }
+  .dot-basic {
+    @apply block bg-white size-2 rounded-full cursor-pointer;
+  }
 }
 @tailwind utilities;
 .menu-dropdown .icon-dropdown {
@@ -47,15 +64,8 @@
   transition: transform 0.2s ease-in-out;
 }
 
-.bg-control {
-  width: 0;
-}
-.bg-control.control-active {
-  animation: slideBackground 7000ms linear forwards;
-}
-
-@keyframes slideBackground {
+@keyframes slideBgDot {
   to {
-    width: 100%; /* Termina en la derecha */
+    width: 100%;
   }
 }
