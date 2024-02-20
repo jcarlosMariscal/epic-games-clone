@@ -12,6 +12,8 @@ import {
 import { gameCarousel, gameCarouselDots } from "../../data/gameList";
 import { CarouselContent } from "../Carousel/CarouselContent";
 
+type TSwiper = { activeIndex: number };
+
 export const CarouselMain = () => {
   const [thumbsSwiper, setThumbsSwiper] = useState<SwiperCore>();
   const [firstSwiper, setFirstSwiper] = useState<SwiperClass>();
@@ -25,14 +27,14 @@ export const CarouselMain = () => {
   //   swiper1Ref.current.controller.control = swiper2Ref.current;
   // }
   // }, []);
-  const handleSlideChange = (swiper: Swiper) => {
+  const handleSlideChange = (swiper: TSwiper) => {
     setCurrentIndex(swiper.activeIndex);
     console.log(swiper);
   };
 
   return (
-    <div className="grid grid-cols-10 !gap-3 h-[29rem]">
-      <div className="col-span-8 h-full">
+    <div className="flex flex-col md:grid md:grid-cols-10 !gap-3 h-[60%]">
+      <div className="md:col-span-8 h-full">
         <Swiper
           onSwiper={(swiper) => {
             if (swiper1Ref.current !== null) {
@@ -46,7 +48,13 @@ export const CarouselMain = () => {
             disableOnInteraction: false,
           }}
           spaceBetween={10}
-          slidesPerView={1}
+          slidesPerView={1.2}
+          breakpoints={{
+            640: {
+              slidesPerView: 1,
+              spaceBetween: 10,
+            },
+          }}
           grabCursor={true}
           thumbs={{
             swiper:
@@ -66,7 +74,7 @@ export const CarouselMain = () => {
           ))}
         </Swiper>
       </div>
-      <div className="col-span-2 h-full">
+      <div className="md:col-span-2 h-full">
         <Swiper
           controller={{ control: firstSwiper }}
           loop={false}
@@ -88,12 +96,14 @@ export const CarouselMain = () => {
           {gameCarouselDots.map((game) => (
             <SwiperSlide
               key={game.id}
-              className={`!w-full h-full bg-epic-blue-600 p-2 rounded-md hover:bg-epic-gray-200 cursor-pointer ${
-                currentIndex === game.id - 1 ? "bg-epic-gray-100" : ""
+              className={`!size-1 p-0 bg-white opacity-40 rounded-full md:opacity-100 md:bg-transparent md:!w-full md:!h-full md:p-2 md:rounded-md md:hover:bg-epic-gray-200 cursor-pointer ${
+                currentIndex === game.id - 1
+                  ? "!opacity-100 md:!bg-epic-gray-100"
+                  : ""
               }`}
             >
               <div
-                className="dot-special-bg-anim"
+                className="hidden md:block dot-special-bg-anim"
                 style={{
                   animation:
                     currentIndex === game.id - 1
@@ -101,10 +111,10 @@ export const CarouselMain = () => {
                       : "",
                 }}
               ></div>
-              <div className="dot-special-bg">
+              <div className="dot-special-bg ">
                 <img
                   src={game.thumb}
-                  className="object-cover w-auto rounded-md select-none h-full md:h-full"
+                  className="hidden md:block object-cover w-auto rounded-md select-none h-full md:h-full"
                 />
                 <p className="block w-full text-xs">{game.title}</p>
               </div>

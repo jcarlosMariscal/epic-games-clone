@@ -22,6 +22,9 @@ import princeOfPersiaMobile from "@/assets/images/games/prince-of-persia-lost-cr
 import honkaiStarRailMobile from "@/assets/images/games/honkai-star-rail-version-2-0-mobile.jpg";
 import outridersMobile from "@/assets/images/games/outriders-complete-edition-mobile.jpg";
 import homeworld3Mobile from "@/assets/images/games/homeworld-3-mobile.jpg";
+import theLamplightherDeluxe from "@/assets/images/deluxe/dotw-the-lamplighers-league-breaker.jpg";
+import DisciplesDeluxe from "@/assets/images/deluxe/dotw-disciples-liberation-deluxe-edition-breaker.jpg";
+import salesSpecialDeluxe from "@/assets/images/deluxe/sales-specials-dotw-breaker-asset.jpg";
 
 export type Images = {
   image: string;
@@ -52,6 +55,44 @@ export interface IGame {
   discount?: string;
   discountPrice?: string;
 }
+
+export interface IGamesDeluxe {
+  id: number;
+  title: string;
+  image: string;
+  price: string | boolean;
+  discount?: string;
+  discountPrice?: string;
+  linkTo?: string;
+  linkText?: string;
+}
+
+export const gamesDeluxe: IGamesDeluxe[] = [
+  {
+    id: 1,
+    title: "The Lamplighters League",
+    image: theLamplightherDeluxe,
+    price: "899",
+    discount: "-40%",
+    discountPrice: "539.40",
+  },
+  {
+    id: 2,
+    title: "Disciples: Liberation Digital Deluxe Edition",
+    image: DisciplesDeluxe,
+    price: "559.99",
+    discount: "-50%",
+    discountPrice: "289.99",
+  },
+  {
+    id: 3,
+    title: "Check out all the deals for this week.",
+    image: salesSpecialDeluxe,
+    price: false,
+    linkTo: "/",
+    linkText: "Browse",
+  },
+];
 
 export const gameCarousel: IGameCarousel[] = [
   {

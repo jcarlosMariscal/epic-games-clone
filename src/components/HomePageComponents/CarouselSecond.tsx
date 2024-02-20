@@ -1,6 +1,5 @@
-import React, { useRef, useState } from "react";
-// Import Swiper React components
-import { Swiper, SwiperSlide, useSwiper, useSwiperSlide } from "swiper/react";
+import { useRef, useState } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
 import { gameCarousel } from "../../data/gameList";
 import { LinkComponent } from "../pure/LinkComponent";
 import { ButtonComponent } from "../pure/ButtonComponent";
@@ -8,16 +7,19 @@ import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
 import { CarouselContentSmall } from "../Carousel/CarouselContentSmall";
 
 export const CarouselSecond = () => {
-  const swiperRef = useRef();
-  const swiper = useSwiper();
-  const swiperSli = useSwiperSlide();
+  const swiperRef = useRef<any>(null);
   const [currentIndex, setCurrentIndex] = useState(0);
   const slidesPerView = 5;
-  const handleSlideChange = (swiper: Swiper) => {
+  type TSwiper = {
+    activeIndex: number;
+  };
+  const handleSlideChange = (swiper: TSwiper) => {
     setCurrentIndex(swiper.activeIndex);
-    console.log(swiper.activeIndex);
   };
   const games = [...gameCarousel, ...gameCarousel];
+  const disabled = (currentIndex: number, limit: number) => {
+    return currentIndex === limit ? "pointer-events-none !opacity-50" : "";
+  };
   return (
     <div className="">
       <div className="flex justify-between mb-2">
@@ -28,9 +30,10 @@ export const CarouselSecond = () => {
           <ButtonComponent
             type="button"
             size="xs"
-            className={`bg-epic-gray-100 hover:opacity-100 ${
-              currentIndex === 0 ? "pointer-events-none !opacity-50" : ""
-            }`}
+            className={`bg-epic-gray-100 hover:opacity-100 ${disabled(
+              currentIndex,
+              0
+            )}`}
             id="slidePrev"
             onClick={() => swiperRef.current.slidePrev()}
           >
@@ -39,11 +42,7 @@ export const CarouselSecond = () => {
           <ButtonComponent
             type="button"
             size="xs"
-            className={`bg-epic-gray-100 hover:opacity-100 ${
-              currentIndex === games.length - slidesPerView
-                ? "pointer-events-none !opacity-50"
-                : ""
-            }`}
+            className={`bg-epic-gray-100 hover:opacity-100`}
             id="slideNext"
             onClick={() => swiperRef.current.slideNext()}
           >
@@ -55,14 +54,27 @@ export const CarouselSecond = () => {
         onSwiper={(swiper) => {
           swiperRef.current = swiper;
         }}
+        slidesPerView={1.4}
         spaceBetween={12}
-        slidesPerView={slidesPerView}
+        breakpoints={{
+          640: {
+            slidesPerView: 1,
+            spaceBetween: 12,
+          },
+          768: {
+            slidesPerView: 4,
+            spaceBetween: 12,
+          },
+          1024: {
+            slidesPerView: 5,
+            spaceBetween: 12,
+          },
+        }}
         onSlideChange={handleSlideChange}
         className="mySwiper"
       >
         {games.map((game, index) => (
           <SwiperSlide key={index}>
-            {/* <img src={game.images.mobile} alt="" className="w-80" /> */}
             <CarouselContentSmall game={game} />
           </SwiperSlide>
         ))}
