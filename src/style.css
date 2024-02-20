@@ -41,16 +41,22 @@
     @apply rounded-md cursor-pointer hover:bg-epic-gray-100 relative;
   }
   .dot-special-bg {
-    @apply hidden md:flex absolute-full p-2 md:items-center gap-3 z-20;
+    @apply hidden md:flex absolute-full rounded-md p-2 md:items-center gap-3 z-20;
   }
   .dot-special-bg-anim {
-    @apply hidden md:block w-0 z-10 absolute-full rounded-md  bg-epic-gray-50;
+    @apply hidden md:block w-0 z-10 absolute-full overflow-hidden rounded-l-md  bg-epic-gray-50;
   }
   .dot-special-img {
     @apply h-10 w-8 xl:h-14 xl:w-10 rounded-md;
   }
   .dot-basic {
     @apply block bg-white size-2 rounded-full cursor-pointer;
+  }
+  .disabled-control {
+    @apply !opacity-50 cursor-default pointer-events-none;
+  }
+  .swiper-cat .swiper-wrapper {
+    @apply grid grid-rows-6 gap-1;
   }
 }
 @tailwind utilities;
@@ -66,6 +72,7 @@
 
 @keyframes slideBgDot {
   to {
+    border-radius: 0.375rem;
     width: 100%;
   }
 }
