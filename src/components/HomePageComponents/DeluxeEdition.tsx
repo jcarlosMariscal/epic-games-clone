@@ -21,10 +21,10 @@ export const DeluxeEdition = () => {
           clickable: true,
         }}
         modules={[Pagination]}
-        className="mySwiper y-20"
+        className="mySwiper"
       >
         {gamesDeluxe.map((game) => (
-          <SwiperSlide className="my-4">
+          <SwiperSlide className="my-0">
             <HoverImage
               className=""
               image={game.image}

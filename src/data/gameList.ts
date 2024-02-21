@@ -25,6 +25,8 @@ import homeworld3Mobile from "@/assets/images/games/homeworld-3-mobile.jpg";
 import theLamplightherDeluxe from "@/assets/images/deluxe/dotw-the-lamplighers-league-breaker.jpg";
 import DisciplesDeluxe from "@/assets/images/deluxe/dotw-disciples-liberation-deluxe-edition-breaker.jpg";
 import salesSpecialDeluxe from "@/assets/images/deluxe/sales-specials-dotw-breaker-asset.jpg";
+import dakarDesertRally from "@/assets/images/freegames/DakarDesertRally_SaberPortoLtd.avif";
+import superMeatBoyForever from "@/assets/images/freegames/SuperMeatBoyForever_TeamMeat.jpg";
 
 export type Images = {
   image: string;
@@ -279,25 +281,28 @@ const gameList: IGame[] = [
 //   ...gameList,
 // ];
 
-// export const freeGames = [
-//   {
-//     title: "skullAndBones",
-//     image: skullAndBones,
-//     freeNow: true,
-//     rangeDate: "Now - Oct 14 at 10:00 PM",
-//   },
-//   {
-//     title: "Far Cry 6",
-//     image: banishers,
-//     freeNow: false,
-//     rangeDate: "Oct 14 - Oct 21",
-//   },
-//   {
-//     title: "Assassins Creeds Valhalla",
-//     image: princeOfPersia,
-//     freeNow: false,
-//     rangeDate: "Oct 14 - Oct 21",
-//   },
-// ];
+interface IFreeGames {
+  id: number;
+  title: string;
+  image: string;
+  freeNow: boolean;
+  rangeDate: string;
+}
+export const freeGames: IFreeGames[] = [
+  {
+    id: 1,
+    title: "Dakar Desert Rally",
+    image: dakarDesertRally,
+    freeNow: true,
+    rangeDate: "Free Now - Feb 22 at 10:00 AM",
+  },
+  {
+    id: 2,
+    title: "Super Meat Boy Forever",
+    image: superMeatBoyForever,
+    freeNow: false,
+    rangeDate: "Free Feb 22 - Feb 29",
+  },
+];
 
 export default gameList;

@@ -7,8 +7,8 @@ type THoverImage = {
   sizeImg?: string;
   image: string;
   button: boolean;
-  buttonTo: string;
-  redirectTo: string;
+  buttonTo?: string;
+  redirectTo?: string;
   roundedImg?: string;
   children?: ReactNode | ReactNode[];
 };
