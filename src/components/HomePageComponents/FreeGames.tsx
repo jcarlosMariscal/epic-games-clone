@@ -22,12 +22,11 @@ export const FreeGames = () => {
         </span>
         <ButtonComponent
           type="button"
-          className="hover:text-opacity-80 w-[7rem] h-10 text-xs relative border border-white last:hover:bg-white last:hover:bg-opacity-30 hover:!opacity-100"
+          className="hover:text-opacity-80 w-[7rem] h-10 text-xs relative border border-white last:hover:bg-white last:hover:bg-opacity-30 hover:!opacity-100 rounded-sm"
           id=""
           size="sm"
           onClick={handleClick}
         >
-          {/* <FaPlus className="mx-1 size-5 p-[.2rem] text-sm bg-epic-black rounded-full border-2 text-white border-white" /> */}
           VIEW MORE
         </ButtonComponent>
       </div>

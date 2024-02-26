@@ -1,7 +1,7 @@
 type TItemPrice = {
   className: string;
   classPrice: string;
-  discount: boolean | string | undefined;
+  discount?: boolean | string | undefined;
   discountPrice: string | undefined;
   price: string | boolean | undefined;
 };
@@ -16,7 +16,7 @@ export const ItemPrice = ({
   return (
     <div className={className}>
       {discount && (
-        <button className="bg-epic-blue-100 py-1 w-12 rounded-md">
+        <button className="bg-epic-blue-100 w-10 h-5 rounded-md text-xs">
           {discount}
         </button>
       )}

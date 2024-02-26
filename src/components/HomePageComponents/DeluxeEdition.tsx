@@ -46,7 +46,7 @@ export const DeluxeEdition = () => {
               ) : (
                 <a
                   href={game.linkTo}
-                  className="underline underline-offset-4 block mt-4"
+                  className="underline underline-offset-4 block mt-4 decoration-epic-gray-50 hover:decoration-white"
                 >
                   {game.linkText}
                 </a>
