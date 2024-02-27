@@ -26,7 +26,7 @@ export const NavBarSecondary = () => {
       <div className="w-9/12 flex items-center gap-4">
         <InputSearch
           placeholder="Search Store"
-          size="w-[13.9rem] h-10"
+          size="w-10 xl:w-[13.9rem] h-10"
           className="bg-epic-gray-100"
         />
         <div className="hidden xl:block">
