@@ -21,8 +21,8 @@ export const OtherComponent = () => {
         modules={[Pagination]}
         className="mySwiper"
       >
-        {freeGames.map((game) => (
-          <SwiperSlide className="my-0">
+        {freeGames.map((game, index) => (
+          <SwiperSlide className="my-0" key={index}>
             <HoverImage
               className=""
               image={game.image}

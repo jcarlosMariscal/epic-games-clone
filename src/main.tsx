@@ -1,16 +1,28 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
+// import {
+//   BrowserRouter,
+//   RouterProvider,
+//   createBrowserRouter,
+// } from "react-router-dom";
 import "./style.css";
-import { HomePage } from "./pages/HomePage.tsx";
-import { HeaderComponent } from "./components/HeaderComponents/HeaderComponent.tsx";
-import { FooterComponent } from "./components/FooterComponent.tsx";
+import { AppRouter } from "./routes/AppRouter.tsx";
+// import { HomePage } from "./pages/HomePage.tsx";
+// import { GamePage } from "./pages/GamePage.tsx";
+
+// const router = createBrowserRouter([
+//   {
+//     path: "/",
+//     element: <HomePage />,
+//   },
+//   {
+//     path: "game",
+//     element: <GamePage />,
+//   },
+// ]);
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
-    <div className="font-inter">
-      <HeaderComponent />
-      <HomePage />
-      <FooterComponent />
-    </div>
+    <AppRouter />
   </React.StrictMode>
 );

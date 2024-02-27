@@ -27,8 +27,8 @@ export const HoverImage = ({
   const handleClick = () => {};
   const handleEnter = () => setShowBtn(true);
   const handleLeave = () => setShowBtn(false);
-  console.log(buttonTo);
-  console.log(redirectTo);
+  // console.log(buttonTo);
+  // console.log(redirectTo);
 
   return (
     <div

@@ -6,7 +6,7 @@ import { Menu, Transition } from "@headlessui/react";
 const navigation = [
   {
     name: "Discover",
-    to: "/",
+    to: "/game",
     // current: location.pathname === "/"
   },
   {

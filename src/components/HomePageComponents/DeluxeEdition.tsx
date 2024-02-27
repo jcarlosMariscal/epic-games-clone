@@ -23,8 +23,8 @@ export const DeluxeEdition = () => {
         modules={[Pagination]}
         className="mySwiper"
       >
-        {gamesDeluxe.map((game) => (
-          <SwiperSlide className="my-0">
+        {gamesDeluxe.map((game, index) => (
+          <SwiperSlide className="my-0" key={index}>
             <HoverImage
               className=""
               image={game.image}

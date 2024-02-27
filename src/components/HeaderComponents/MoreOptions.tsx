@@ -16,7 +16,7 @@ export const MoreOptions = () => {
         <FiGlobe />
       </ButtonComponent>
       <LinkComponent
-        to="/"
+        to="/login"
         size="xs"
         className={`bg-epic-gray-200 text-lg hover:opacity-100`}
       >

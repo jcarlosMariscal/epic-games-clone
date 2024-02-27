@@ -34,8 +34,9 @@ export const TopGames = ({ title, condi }: TTopGames) => {
         </ButtonComponent>
       </div>
       <div className="my-2">
-        {gameCarousel.map((game) => (
+        {gameCarousel.map((game, index) => (
           <HoverImage
+            key={index}
             className="w-full h-22 p-2"
             sizeImg="w-12"
             image={game.images.mobile}

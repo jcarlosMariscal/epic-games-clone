@@ -1,4 +1,5 @@
 import { ReactNode } from "react";
+import { NavLink } from "react-router-dom";
 
 type Link = {
   to: string;
@@ -21,11 +22,11 @@ export const LinkComponent = ({ to, size, className, children }: Link) => {
     },
   };
   return (
-    <a
-      href={to}
+    <NavLink
+      to={to}
       className={`${style.sizes[size]} ${className} flex-center btn-transition`}
     >
       {children}
-    </a>
+    </NavLink>
   );
 };
