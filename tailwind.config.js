@@ -11,6 +11,7 @@ export default {
       transparent: "transparent",
       epic: {
         black: "rgb(18,18,18)",
+        red: "#de3341",
         gray: {
           50: "#404044",
           // 100: "#2F2F2F",
@@ -35,7 +36,7 @@ export default {
       },
     },
     screens: {
-      ssm: "400px",
+      ssm: "420px",
       sm: "640px",
       // => @media (min-width: 640px) { ... }
 
