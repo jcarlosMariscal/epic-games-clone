@@ -20,7 +20,7 @@ export const CardGradient = ({
 }: TCustomComponentProps) => {
   return (
     <div
-      className={`w-full ${height} p-10 rounded-lg border border-epic-gray-50 border-opacity-50`}
+      className={`w-full ${height} p-10 rounded-2xl border border-epic-gray-50 border-opacity-50`}
       style={{
         background: backgroundStyle,
       }}

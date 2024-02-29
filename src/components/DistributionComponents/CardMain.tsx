@@ -1,4 +1,4 @@
-import servicePublishing from "@/assets/distributionPage/epic-games-store-self-service-publishing-tools.webp";
+import servicePublishing from "@/assets/distributionPage/games-store-self-service-publishing-tools.webp";
 import LogotypeVertical from "@/assets/distributionPage/logotype-vertical-white.svg?react";
 import { LinkComponent } from "../pure/LinkComponent";
 
