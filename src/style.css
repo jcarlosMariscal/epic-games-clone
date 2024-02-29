@@ -15,6 +15,7 @@
     @apply flex justify-center items-center;
   }
   .main-content {
+    /* @apply w-[88vw] md:w-[95vw] lg:w-11/12 xl:w-9/12; */
     @apply w-[88vw] md:w-[95vw] lg:w-9/12;
   }
   .transition-300 {

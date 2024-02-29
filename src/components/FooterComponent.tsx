@@ -7,17 +7,20 @@ export const FooterComponent = () => {
       <div className="py-8 w-full lg:w-11/12 px-6 lg:px-1">
         <div className="flex justify-between">
           <div className="flex gap-4">
-            <HyperLinkComponent className="text-3xl opacity-80">
+            <HyperLinkComponent type="hover" className="text-3xl opacity-80">
               <FaFacebook />
             </HyperLinkComponent>
-            <HyperLinkComponent className="text-3xl opacity-80">
+            <HyperLinkComponent type="hover" className="text-3xl opacity-80">
               <FaTwitter />
             </HyperLinkComponent>
-            <HyperLinkComponent className="text-3xl opacity-80">
+            <HyperLinkComponent type="hover" className="text-3xl opacity-80">
               <FaYoutube />
             </HyperLinkComponent>
           </div>
-          <HyperLinkComponent className="text-xl opacity-80 size-9 border-2 flex items-center justify-center">
+          <HyperLinkComponent
+            type="hover"
+            className="text-xl opacity-80 size-9 border-2 flex items-center justify-center"
+          >
             <FaChevronUp />
           </HyperLinkComponent>
         </div>
@@ -25,20 +28,32 @@ export const FooterComponent = () => {
           <span className="block text-sm opacity-50 my-2">Resources</span>
           <div className="text-sm flex flex-wrap items-center gap-0 ssm:gap-2 xl:gap-4">
             <div className="flex flex-col gap-1">
-              <HyperLinkComponent>Support-A-Creator</HyperLinkComponent>
-              <HyperLinkComponent>Distribute on Epic Games</HyperLinkComponent>
-              <HyperLinkComponent>Careers</HyperLinkComponent>
-              <HyperLinkComponent>Company</HyperLinkComponent>
+              <HyperLinkComponent type="hover">
+                Support-A-Creator
+              </HyperLinkComponent>
+              <HyperLinkComponent type="hover">
+                Distribute on Epic Games
+              </HyperLinkComponent>
+              <HyperLinkComponent type="hover">Careers</HyperLinkComponent>
+              <HyperLinkComponent type="hover">Company</HyperLinkComponent>
             </div>
             <div className="flex flex-col gap-1">
-              <HyperLinkComponent>Fan Art Policy</HyperLinkComponent>
-              <HyperLinkComponent>UX Research</HyperLinkComponent>
-              <HyperLinkComponent>Store EULA</HyperLinkComponent>
+              <HyperLinkComponent type="hover">
+                Fan Art Policy
+              </HyperLinkComponent>
+              <HyperLinkComponent type="hover">UX Research</HyperLinkComponent>
+              <HyperLinkComponent type="hover">Store EULA</HyperLinkComponent>
             </div>
             <div className="flex flex-col gap-1">
-              <HyperLinkComponent>Online Services</HyperLinkComponent>
-              <HyperLinkComponent>Community Rules</HyperLinkComponent>
-              <HyperLinkComponent>Epic Newsroom</HyperLinkComponent>
+              <HyperLinkComponent type="hover">
+                Online Services
+              </HyperLinkComponent>
+              <HyperLinkComponent type="hover">
+                Community Rules
+              </HyperLinkComponent>
+              <HyperLinkComponent type="hover">
+                Epic Newsroom
+              </HyperLinkComponent>
             </div>
           </div>
         </div>
@@ -49,14 +64,22 @@ export const FooterComponent = () => {
           </span>
           <div className="text-sm flex flex-wrap items-center gap-0 ssm:gap-4 xl:gap-20">
             <div className="flex flex-col gap-1">
-              <HyperLinkComponent>Battle Breakers</HyperLinkComponent>
-              <HyperLinkComponent>Fortnite</HyperLinkComponent>
-              <HyperLinkComponent>Infinity Blade</HyperLinkComponent>
+              <HyperLinkComponent type="hover">
+                Battle Breakers
+              </HyperLinkComponent>
+              <HyperLinkComponent type="hover">Fortnite</HyperLinkComponent>
+              <HyperLinkComponent type="hover">
+                Infinity Blade
+              </HyperLinkComponent>
             </div>
             <div className="flex flex-col gap-1">
-              <HyperLinkComponent>Robo Recall</HyperLinkComponent>
-              <HyperLinkComponent>Shadow Complex</HyperLinkComponent>
-              <HyperLinkComponent>Unreal Tournament</HyperLinkComponent>
+              <HyperLinkComponent type="hover">Robo Recall</HyperLinkComponent>
+              <HyperLinkComponent type="hover">
+                Shadow Complex
+              </HyperLinkComponent>
+              <HyperLinkComponent type="hover">
+                Unreal Tournament
+              </HyperLinkComponent>
             </div>
           </div>
         </div>
@@ -85,9 +108,13 @@ export const FooterComponent = () => {
         </div>
         <div className="w-full mt-6 md:mt-8 flex flex-col md:flex-row items-center justify-center md:justify-between gap-4">
           <div className="flex flex-col md:flex-row gap-2 md:gap-4 items-center md:items-start text-xs">
-            <HyperLinkComponent>Terms of Service Privacy</HyperLinkComponent>
-            <HyperLinkComponent>Privacy Policy</HyperLinkComponent>
-            <HyperLinkComponent>Store Refund Policy</HyperLinkComponent>
+            <HyperLinkComponent type="hover">
+              Terms of Service Privacy
+            </HyperLinkComponent>
+            <HyperLinkComponent type="hover">Privacy Policy</HyperLinkComponent>
+            <HyperLinkComponent type="hover">
+              Store Refund Policy
+            </HyperLinkComponent>
           </div>
           <div className="flex gap-2">
             <div className="opacity-60">

@@ -4,12 +4,19 @@ type THyperLink = {
   children: string | ReactNode;
   to?: string;
   className?: string;
+  type?: string;
 };
-export const HyperLinkComponent = ({ children, className }: THyperLink) => {
+export const HyperLinkComponent = ({
+  children,
+  className,
+  type = "underline",
+}: THyperLink) => {
+  const typeCss =
+    type === "hover" ? "hover:text-epic-blue-100 btn-transition" : "";
   return (
     <a
       // href=""
-      className={`hover:text-epic-blue-100 cursor-pointer btn-transition ${className}`}
+      className={`cursor-pointer ${className} ${typeCss}`}
     >
       {children}
     </a>

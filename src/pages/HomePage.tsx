@@ -17,22 +17,20 @@ import { OtherComponent } from "../components/HomePageComponents/OtherComponent"
 
 export const HomePage = () => {
   return (
-    <div className="background-dark size-full flex items-center flex-col">
-      <div className="main-content py-1 flex flex-col gap-14">
-        <CarouselMain />
-        <CarouselSecond />
-        <DeluxeEdition />
-        <FreeGames />
-        <CarouselTitle
-          title="Fornite Experiences"
-          button={true}
-          buttonText="VISIT FORNITE.COM"
-        />
-        <OtherGames />
-        <CarouselTops />
-        <OtherComponent />
-        <CarouselTitle title="Trending" button={true} buttonText="VIEW MORE" />
-      </div>
+    <div className="main-content w-full flex flex-col gap-14">
+      <CarouselMain />
+      <CarouselSecond />
+      <DeluxeEdition />
+      <FreeGames />
+      <CarouselTitle
+        title="Fornite Experiences"
+        button={true}
+        buttonText="VISIT FORNITE.COM"
+      />
+      <OtherGames />
+      <CarouselTops />
+      <OtherComponent />
+      <CarouselTitle title="Trending" button={true} buttonText="VIEW MORE" />
     </div>
   );
 };

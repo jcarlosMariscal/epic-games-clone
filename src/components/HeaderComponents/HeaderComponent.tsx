@@ -8,8 +8,12 @@ export const HeaderComponent = () => {
       <NavBarPrimary />
       <NavBarSecondary />
 
-      <main>
-        <Outlet />
+      {/* <div className="background-dark h-24 flex-center sticky top-0 z-40"> */}
+      {/* <div ></div> */}
+      <main className="background-dark flex-center">
+        <div className="main-content flex items-center gap-4 py-1">
+          <Outlet />
+        </div>
       </main>
       <FooterComponent />
     </>

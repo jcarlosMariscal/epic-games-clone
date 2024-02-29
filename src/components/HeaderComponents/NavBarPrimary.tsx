@@ -8,15 +8,15 @@ import { EpicgamesLogoComponent } from "./EpicgamesLogoComponent";
 const navigation = [
   {
     name: "Distribution",
-    to: "/",
+    to: "/distribution",
     // current: location.pathname === "/"
   },
   {
     name: "Support",
-    to: "/pokedex",
+    to: "/",
   },
   {
-    name: "UnrealEngine",
+    name: "Unreal Engine",
     to: "/",
   },
 ];

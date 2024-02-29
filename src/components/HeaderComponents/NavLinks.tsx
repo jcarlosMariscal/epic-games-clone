@@ -17,9 +17,15 @@ export const NavLinks = ({ navigation, navbar }: Navigation) => {
     secondary: "!p-0 mx-5 text-sm opacity-text",
   };
   return (
-    <nav className="flex-center">
+    <nav className="flex-center gap-1">
       {navigation.map((item, index) => (
-        <LinkComponent key={index} to="/" size="sm" className={style[navbar]}>
+        <LinkComponent
+          key={index}
+          to={item.to}
+          size="sm"
+          className={style[navbar]}
+          navbar={navbar}
+        >
           {item.name}
         </LinkComponent>
       ))}
