@@ -1,11 +1,5 @@
-import { ElementType } from "react";
+import { TCardBasic } from "../../data/distributionPage";
 
-type TCardBasic = {
-  title: string;
-  description: string;
-  className?: string;
-  SVGComponent: ElementType;
-};
 export const CardBasic = ({
   title,
   description,

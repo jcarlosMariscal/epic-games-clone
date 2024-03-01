@@ -1,14 +1,17 @@
-import servicePublishing from "@/assets/distributionPage/games-store-self-service-publishing-tools.webp";
-import LogotypeVertical from "@/assets/distributionPage/logotype-vertical-white.svg?react";
+import {
+  LogotypeVertical,
+  servicePublishing,
+} from "../../data/distributionPage";
 import { LinkComponent } from "../pure/LinkComponent";
 
 export const CardMain = () => {
+  const gradient =
+    "rgb(3, 5, 86) linear-gradient(315deg, rgb(32, 14, 67), rgb(3, 5, 86), rgb(4, 4, 24))";
   return (
     <div
       className="w-full h-auto flex items-center rounded-sm"
       style={{
-        background:
-          "rgb(3, 5, 86) linear-gradient(315deg, rgb(32, 14, 67), rgb(3, 5, 86), rgb(4, 4, 24))",
+        background: gradient,
       }}
     >
       <div className="w-1/2 hidden md:block">
