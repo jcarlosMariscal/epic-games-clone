@@ -6,12 +6,12 @@ import { Menu, Transition } from "@headlessui/react";
 const navigation = [
   {
     name: "Discover",
-    to: "/game",
+    to: "/",
     // current: location.pathname === "/"
   },
   {
     name: "Browse",
-    to: "/pokedex",
+    to: "/browse",
     // current: location.pathname === "/support",
   },
   {

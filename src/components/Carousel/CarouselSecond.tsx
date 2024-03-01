@@ -4,12 +4,32 @@ import { gameCarousel } from "../../data/gameList";
 import { LinkComponent } from "../pure/LinkComponent";
 import { ButtonComponent } from "../pure/ButtonComponent";
 import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
-import { CarouselContentSmall } from "../Carousel/CarouselContentSmall";
+import { CarouselContentSmall } from "./CarouselContentSmall";
+import { useNavigate } from "react-router-dom";
 
-export const CarouselSecond = () => {
+type TCarouselSecond = {
+  title: string;
+  size: string;
+  slidesPerView: number;
+  spaceBetween: number;
+  breakpoints: {
+    [prop: number]: {
+      slidesPerView: number;
+      spaceBetween: number;
+    };
+  };
+};
+
+export const CarouselSecond = ({
+  title,
+  size = "lg",
+  slidesPerView,
+  spaceBetween,
+  breakpoints,
+}: TCarouselSecond) => {
+  const navigate = useNavigate();
   const swiperRef = useRef<any>(null);
   const [currentIndex, setCurrentIndex] = useState(0);
-  const slidesPerView = 5;
   type TSwiper = {
     activeIndex: number;
   };
@@ -20,11 +40,14 @@ export const CarouselSecond = () => {
   const disabled = (currentIndex: number, limit: number) => {
     return currentIndex === limit ? "pointer-events-none !opacity-50" : "";
   };
+  const handleClick = () => {
+    navigate("/distribution");
+  };
   return (
     <div className="">
       <div className="flex justify-between mb-2">
         <LinkComponent to="/" size="" className="">
-          Featured Discounts
+          {title}
         </LinkComponent>
         <div className="flex gap-2">
           <ButtonComponent
@@ -54,28 +77,19 @@ export const CarouselSecond = () => {
         onSwiper={(swiper) => {
           swiperRef.current = swiper;
         }}
-        slidesPerView={1.4}
-        spaceBetween={12}
-        breakpoints={{
-          640: {
-            slidesPerView: 1,
-            spaceBetween: 12,
-          },
-          768: {
-            slidesPerView: 4,
-            spaceBetween: 12,
-          },
-          1024: {
-            slidesPerView: 5,
-            spaceBetween: 12,
-          },
-        }}
+        slidesPerView={slidesPerView}
+        spaceBetween={spaceBetween}
+        breakpoints={breakpoints}
         onSlideChange={handleSlideChange}
         className="mySwiper"
       >
         {games.map((game, index) => (
-          <SwiperSlide key={index}>
-            <CarouselContentSmall game={game} />
+          <SwiperSlide
+            key={index}
+            className="cursor-pointer"
+            onClick={handleClick}
+          >
+            <CarouselContentSmall game={game} size={size} />
           </SwiperSlide>
         ))}
       </Swiper>

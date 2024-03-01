@@ -5,7 +5,7 @@ import "swiper/css/thumbs";
 import "swiper/css/pagination";
 
 import { CarouselMain } from "../components/HomePageComponents/CarouselMain";
-import { CarouselSecond } from "../components/HomePageComponents/CarouselSecond";
+import { CarouselSecond } from "../components/Carousel/CarouselSecond";
 import { DeluxeEdition } from "../components/HomePageComponents/DeluxeEdition";
 import { FreeGames } from "../components/HomePageComponents/FreeGames";
 import { CarouselTitle } from "../components/HomePageComponents/CarouselTitle";
@@ -19,7 +19,26 @@ export const HomePage = () => {
   return (
     <div className="main-content w-full flex flex-col gap-14">
       <CarouselMain />
-      <CarouselSecond />
+      <CarouselSecond
+        title="Featured Discounts"
+        size="lg"
+        slidesPerView={1.4}
+        spaceBetween={12}
+        breakpoints={{
+          640: {
+            slidesPerView: 1,
+            spaceBetween: 12,
+          },
+          768: {
+            slidesPerView: 4,
+            spaceBetween: 12,
+          },
+          1024: {
+            slidesPerView: 5,
+            spaceBetween: 12,
+          },
+        }}
+      />
       <DeluxeEdition />
       <FreeGames />
       <CarouselTitle

@@ -9,6 +9,7 @@ import { GamePage } from "../pages/GamePage";
 import { HeaderComponent } from "../components/HeaderComponents/HeaderComponent";
 import { LoginPage } from "../pages/LoginPage";
 import { DistributionPage } from "../pages/DistributionPage";
+import { BrowsePage } from "../pages/BrowsePage";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -17,6 +18,7 @@ const router = createBrowserRouter(
         <Route index element={<HomePage />}></Route>
         <Route path="game" element={<GamePage />}></Route>
         <Route path="distribution" element={<DistributionPage />}></Route>
+        <Route path="browse" element={<BrowsePage />}></Route>
       </Route>
       <Route path="/login" element={<LoginPage />} />
     </>

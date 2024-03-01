@@ -1,14 +1,14 @@
 import { ReactNode, useState } from "react";
 import { ButtonComponent } from "./ButtonComponent";
 import { FaPlus } from "react-icons/fa6";
+import { useNavigate } from "react-router-dom";
 
 type THoverImage = {
   className?: string;
   sizeImg?: string;
   image: string;
   button: boolean;
-  buttonTo?: string;
-  redirectTo?: string;
+  buttonTo: string;
   roundedImg?: string;
   children?: ReactNode | ReactNode[];
 };
@@ -20,19 +20,19 @@ export const HoverImage = ({
   roundedImg = "rounded-md",
   button,
   buttonTo,
-  redirectTo,
   children,
 }: THoverImage) => {
   const [showBtn, setShowBtn] = useState(false);
-  const handleClick = () => {};
+  const navigate = useNavigate();
+  const handleClick = () => {
+    navigate(buttonTo);
+  };
   const handleEnter = () => setShowBtn(true);
   const handleLeave = () => setShowBtn(false);
-  // console.log(buttonTo);
-  // console.log(redirectTo);
 
   return (
     <div
-      className={`relative flex gap-3 ${className}`}
+      className={`relative flex gap-3 ${className} cursor-pointer`}
       onMouseEnter={handleEnter}
       onMouseLeave={handleLeave}
     >
@@ -56,7 +56,9 @@ export const HoverImage = ({
         )}
       </div>
       {children}
-      <div className="z-10 absolute-full bg-transparent hover:bg-white hover:opacity-10 cursor-pointer rounded-md"></div>
+      <div
+        className={`z-10 absolute-full bg-transparent hover:bg-white hover:opacity-10 cursor-pointer rounded-md`}
+      ></div>
     </div>
   );
 };
