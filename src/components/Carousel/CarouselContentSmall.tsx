@@ -5,6 +5,7 @@ import { ItemPrice } from "../pure/ItemPrice";
 type TGame = {
   game: IGameCarousel;
   size: string;
+  customHeight?: string;
 };
 type TStyle = {
   size: {
@@ -14,28 +15,34 @@ type TStyle = {
     [prop: string]: string;
   };
 };
-export const CarouselContentSmall = ({ game, size = "lg" }: TGame) => {
+export const CarouselContentSmall = ({
+  game,
+  size = "lg",
+  customHeight,
+}: TGame) => {
   const style: TStyle = {
     size: {
-      md: "h-[13rem] p-5 bg-epic-gray-100 rounded-md",
+      md: "h-[9rem] md:h-[13rem] p-5 bg-epic-gray-100 rounded-md",
       lg: "h-[30rem] md:h-[16rem]",
     },
     img: {
-      md: "h-[8rem]",
+      md: "h-[4rem] md:h-[8rem]",
       lg: "size-full",
     },
   };
   return (
     <>
       <HoverImage
-        className={`${style.size[size]} flex-col`}
+        className={`${customHeight ? customHeight : style.size[size]} flex-col`}
         sizeImg={`${style.img[size]}`}
         image={game.images.mobile}
         button={size === "md" ? false : true}
         buttonTo="/"
       >
         {size === "md" && (
-          <span className="text-md font-bold">Action-Adventure Games</span>
+          <span className="text-xs md:text-md font-bold">
+            Action-Adventure Games
+          </span>
         )}
       </HoverImage>
       {size !== "md" && (
