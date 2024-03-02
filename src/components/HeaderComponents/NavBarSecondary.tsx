@@ -25,7 +25,7 @@ export const NavBarSecondary = () => {
         <InputSearch
           placeholder="Search Store"
           size="w-10 xl:w-[13.9rem] h-10"
-          className="bg-epic-gray-100"
+          className="bg-epic-gray-100 rounded-full"
         />
         <div className="hidden xl:block">
           <NavLinks navigation={navigation} navbar="secondary" />

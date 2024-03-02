@@ -3,6 +3,7 @@ import { CarouselSecond } from "../components/Carousel/CarouselSecond";
 import { CarouselContentSmall } from "../components/Carousel/CarouselContentSmall";
 import { gameCarousel } from "../data/gameList";
 import { MenuDropdown } from "../components/pure/MenuDropdown";
+import { FiltersComponent } from "../components/pure/FiltersComponent";
 
 const games = [
   ...gameCarousel,
@@ -40,17 +41,15 @@ export const BrowsePage = () => {
           },
         }}
       />
-      <div className="grid grid-cols-12 gap-4">
+      <div className="grid grid-cols-12 gap-6">
         <div className="col-span-9">
-          <div className="my-2">
-            <span>
-              Show:{" "}
-              <MenuDropdown title="selected" items={items} animIcon="rotate" />
-            </span>
+          <div className="mb-3">
+            <span className="text-sm opacity-60">Show:</span>
+            <MenuDropdown title="selected" items={items} animIcon="rotate" />
           </div>
           <div className="grid grid-cols-4 gap-4">
             {games.map((game, index) => (
-              <div key={index} className="bg-epic-gray-200">
+              <div key={index}>
                 <CarouselContentSmall
                   game={game}
                   size="lg"
@@ -60,7 +59,9 @@ export const BrowsePage = () => {
             ))}
           </div>
         </div>
-        <div className="col-span-3 bg-epic-blue-100 h-full"></div>
+        <div className="col-span-3 h-full">
+          <FiltersComponent />
+        </div>
       </div>
     </div>
   );

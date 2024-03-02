@@ -59,6 +59,9 @@
   .swiper-cat .swiper-wrapper {
     @apply flex justify-center md:grid md:grid-rows-6 md:justify-normal md:gap-1;
   }
+  .border50-opacity {
+    @apply border-b border-epic-gray-50 border-opacity-50;
+  }
 }
 @tailwind utilities;
 .menu-dropdown .icon-dropdown {
