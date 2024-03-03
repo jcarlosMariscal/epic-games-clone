@@ -11,6 +11,9 @@ const games = [
   ...gameCarousel,
   ...gameCarousel,
   ...gameCarousel,
+  ...gameCarousel,
+  ...gameCarousel,
+  ...gameCarousel,
 ];
 
 const items = [
@@ -42,25 +45,30 @@ export const BrowsePage = () => {
         }}
       />
       <div className="grid grid-cols-12 gap-6">
-        <div className="col-span-9">
-          <div className="mb-3">
-            <span className="text-sm opacity-60">Show:</span>
-            <MenuDropdown title="selected" items={items} animIcon="rotate" />
+        <div className="col-span-12 lg:col-span-9">
+          <div className="mb-3 flex items-center justify-between">
+            <div>
+              <span className="text-sm opacity-60">Show:</span>
+              <MenuDropdown title="selected" items={items} animIcon="rotate" />
+            </div>
+            <div className="block lg:hidden">
+              <FiltersComponent screen="sm" />
+            </div>
           </div>
-          <div className="grid grid-cols-4 gap-4">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {games.map((game, index) => (
               <div key={index}>
                 <CarouselContentSmall
                   game={game}
                   size="lg"
-                  customHeight="h-[14rem]"
+                  customHeight="h-[50%] lg:h-[10rem] xl:h-[14rem]"
                 />
               </div>
             ))}
           </div>
         </div>
-        <div className="col-span-3 h-full">
-          <FiltersComponent />
+        <div className="col-span-3 h-full hidden lg:block">
+          <FiltersComponent screen="lg" />
         </div>
       </div>
     </div>

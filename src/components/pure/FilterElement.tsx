@@ -1,13 +1,28 @@
 import { useState } from "react";
 import { IoChevronDownSharp } from "react-icons/io5";
 
-export const FilterElement = ({ filter }) => {
-  const [showData, setShowData] = useState(false);
+type TFilter = {
+  name: string;
+  active?: boolean;
+};
+
+type TFilters = {
+  filter: {
+    id: number;
+    name: string;
+    active: boolean;
+    subFilters: TFilter[];
+  };
+};
+export const FilterElement = ({ filter }: TFilters) => {
+  console.log(filter);
+
+  const [showData, setShowData] = useState(filter.active);
   const handleClick = () => {
     setShowData(!showData);
   };
   return (
-    <div className="py-5 border50-opacity">
+    <div className={`py-5 ${showData ? "pb-0" : ""} border50-opacity`}>
       <div
         className="flex justify-between opacity-60 hover:opacity-100 cursor-pointer"
         onClick={handleClick}
@@ -21,10 +36,14 @@ export const FilterElement = ({ filter }) => {
       </div>
       {showData && (
         <div className="transition-all">
-          {filter.subFilters.map((fil, index) => (
+          {filter.subFilters.map((fil: TFilter, index: number) => (
             <span
               key={index}
-              className="block text-sm my-4 opacity-60 hover:opacity-100 cursor-pointer transition"
+              className={`${
+                fil.active
+                  ? "bg-epic-gray-100"
+                  : "opacity-60 hover:opacity-100 cursor-pointer"
+              } block w-full text-xs my-4 px-2 py-4 transition`}
             >
               {fil.name}
             </span>
