@@ -4,6 +4,7 @@ import { CarouselContentSmall } from "../components/Carousel/CarouselContentSmal
 import { gameCarousel } from "../data/gameList";
 import { MenuDropdown } from "../components/pure/MenuDropdown";
 import { FiltersComponent } from "../components/pure/FiltersComponent";
+import { Pagination } from "../components/pure/Pagination";
 
 const games = [
   ...gameCarousel,
@@ -66,6 +67,7 @@ export const BrowsePage = () => {
               </div>
             ))}
           </div>
+          <Pagination />
         </div>
         <div className="col-span-3 h-full hidden lg:block">
           <FiltersComponent screen="lg" />

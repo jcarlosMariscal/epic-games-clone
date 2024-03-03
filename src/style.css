@@ -62,6 +62,12 @@
   .border50-opacity {
     @apply border-b border-epic-gray-50 border-opacity-50;
   }
+  .pagination-link {
+    @apply opacity-60 hover:opacity-100 cursor-pointer font-light;
+  }
+  /* .pagination-active{
+    @apply opacity-60 hover:opacity-100 cursor-pointer
+  } */
 }
 @tailwind utilities;
 .menu-dropdown .icon-dropdown {
