@@ -14,7 +14,7 @@ const navigation = [
   },
   {
     name: "News",
-    to: "/",
+    to: "/news",
     // current: location.pathname === "/",
   },
 ];

@@ -29,7 +29,6 @@ export const OtherComponent = () => {
               roundedImg="rounded-2xl"
               button={false}
               buttonTo="/"
-              redirectTo="/"
             />
             <div className="my-4">
               {game.id === 1 ? (

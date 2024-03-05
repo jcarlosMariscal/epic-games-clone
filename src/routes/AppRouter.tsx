@@ -10,6 +10,7 @@ import { HeaderComponent } from "../components/HeaderComponents/HeaderComponent"
 import { LoginPage } from "../pages/LoginPage";
 import { DistributionPage } from "../pages/DistributionPage";
 import { BrowsePage } from "../pages/BrowsePage";
+import { NewsPage } from "../pages/NewsPage";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -19,6 +20,7 @@ const router = createBrowserRouter(
         <Route path="game" element={<GamePage />}></Route>
         <Route path="distribution" element={<DistributionPage />}></Route>
         <Route path="browse" element={<BrowsePage />}></Route>
+        <Route path="news" element={<NewsPage />}></Route>
       </Route>
       <Route path="/login" element={<LoginPage />} />
     </>
