@@ -62,12 +62,15 @@
   .border50-opacity {
     @apply border-b border-epic-gray-50 border-opacity-50;
   }
+  .borderTop-opacity {
+    @apply border-t border-epic-gray-50 border-opacity-70;
+  }
   .pagination-link {
     @apply opacity-60 hover:opacity-100 cursor-pointer font-light;
   }
-  /* .pagination-active{
-    @apply opacity-60 hover:opacity-100 cursor-pointer
-  } */
+  .a-hover-decoration {
+    @apply underline underline-offset-2 decoration-epic-gray-50 hover:decoration-white;
+  }
 }
 @tailwind utilities;
 .menu-dropdown .icon-dropdown {

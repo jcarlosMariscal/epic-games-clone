@@ -48,10 +48,7 @@ export const OtherComponent = () => {
                   </p>
                 </>
               )}
-              <a
-                href=""
-                className="underline underline-offset-4 block mt-4 decoration-epic-gray-50 hover:decoration-white"
-              >
+              <a href="" className="a-hover-decoration">
                 Play For Free
               </a>
             </div>
