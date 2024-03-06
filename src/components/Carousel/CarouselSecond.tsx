@@ -41,7 +41,7 @@ export const CarouselSecond = ({
     return currentIndex === limit ? "pointer-events-none !opacity-50" : "";
   };
   const handleClick = () => {
-    navigate("/distribution");
+    navigate("/game");
   };
   return (
     <div className="">

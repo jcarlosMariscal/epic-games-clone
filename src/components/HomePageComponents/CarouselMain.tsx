@@ -1,6 +1,5 @@
 import React, { useRef, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import SwiperClass from "swiper/types/swiper-class";
 import SwiperCore from "swiper";
 import {
   Autoplay,
@@ -16,17 +15,12 @@ type TSwiper = { activeIndex: number };
 
 export const CarouselMain = () => {
   const [thumbsSwiper, setThumbsSwiper] = useState<SwiperCore>();
-  const [firstSwiper, setFirstSwiper] = useState<SwiperClass>();
-  const [secondSwiper, setSecondSwiper] = useState<SwiperClass>();
+  const [firstSwiper] = useState();
+  const [secondSwiper] = useState();
   const swiper1Ref = useRef<React.MutableRefObject<null>>(null);
   // const swiper2Ref = useRef();
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  // useLayoutEffect(() => {
-  // if (swiper1Ref.current !== null) {
-  //   swiper1Ref.current.controller.control = swiper2Ref.current;
-  // }
-  // }, []);
   const handleSlideChange = (swiper: TSwiper) => {
     setCurrentIndex(swiper.activeIndex);
     console.log(swiper);
@@ -41,7 +35,6 @@ export const CarouselMain = () => {
               swiper1Ref.current = swiper;
             }
           }}
-          // preloadImages={false}
           controller={{ control: secondSwiper }}
           autoplay={{
             delay: 7000,
@@ -86,8 +79,6 @@ export const CarouselMain = () => {
           slidesPerView={8}
           watchSlidesProgress
           touchRatio={0.2}
-          // preloadImages={false}
-          // lazy
           slideToClickedSlide={true}
           onSwiper={setThumbsSwiper}
           modules={[Autoplay, Navigation, Thumbs, Controller]}
