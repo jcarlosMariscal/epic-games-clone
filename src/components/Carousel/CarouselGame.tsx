@@ -27,7 +27,7 @@ export const CarouselGame = () => {
   };
   return (
     <div className="w-full">
-      <div className="h-[10rem] ssm:h-[14rem] sm:h-full bg-epic-red">
+      <div className="h-[10rem] ssm:h-[14rem] sm:h-full">
         <Swiper
           onSwiper={(swiper) => (swiper1Ref.current = swiper)}
           controller={{ control: secondSwiper }}

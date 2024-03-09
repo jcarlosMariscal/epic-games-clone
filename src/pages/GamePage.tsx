@@ -1,4 +1,6 @@
 import { CarouselGame } from "../components/Carousel/CarouselGame";
+import { DetailSO } from "../components/GameComponents/DetailSO";
+import { EpicgamesRating } from "../components/GameComponents/EpicgamesRating";
 import { FollowUs } from "../components/GameComponents/FollowUs";
 import { GameDetails } from "../components/GameComponents/GameDetails";
 import { GameNav } from "../components/GameComponents/GameNav";
@@ -62,9 +64,13 @@ export const GamePage = () => {
             </span>
           </div>
           <GameDetails />
-          <FollowUs />
         </div>
         <div className="col-span-4 w-full h-10"></div>
+      </div>
+      <div className="w-full xl:w-8/12">
+        <FollowUs />
+        <EpicgamesRating />
+        <DetailSO />
       </div>
     </div>
   );
