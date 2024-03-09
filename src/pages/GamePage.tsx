@@ -1,4 +1,5 @@
 import { CarouselGame } from "../components/Carousel/CarouselGame";
+import { FollowUs } from "../components/GameComponents/FollowUs";
 import { GameDetails } from "../components/GameComponents/GameDetails";
 import { GameNav } from "../components/GameComponents/GameNav";
 import { GameTitle } from "../components/GameComponents/GameTitle";
@@ -14,7 +15,7 @@ export const GamePage = () => {
           <CarouselGame />
           <div className="my-8">
             <p>Open-World Adventure High-Fantasy Strategy RPG</p>
-            <div className="flex gap-20 text-sm my-10">
+            <div className="flex flex-col md:flex-row gap-6 md:gap-20 text-sm my-10">
               <div className="pl-6 border-l border-epic-gray-50">
                 <span className="block opacity-60">Genres</span>
                 <div>
@@ -61,6 +62,7 @@ export const GamePage = () => {
             </span>
           </div>
           <GameDetails />
+          <FollowUs />
         </div>
         <div className="col-span-4 w-full h-10"></div>
       </div>

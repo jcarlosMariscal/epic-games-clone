@@ -71,6 +71,9 @@
   .a-hover-decoration {
     @apply underline underline-offset-2 decoration-epic-gray-50 hover:decoration-white;
   }
+  .a-icon-translate {
+    @apply text-2xl opacity-60 hover:opacity-100 cursor-pointer hover:translate-y-[-.05rem];
+  }
 }
 @tailwind utilities;
 .menu-dropdown .icon-dropdown {

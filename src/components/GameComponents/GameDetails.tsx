@@ -2,6 +2,7 @@ import { FiChevronDown, FiChevronUp } from "react-icons/fi";
 import { ButtonComponent } from "../pure/ButtonComponent";
 import { GameDetail } from "./GameDetail";
 import { useState } from "react";
+import { princeOfPersia } from "../../data/gameList";
 
 export const GameDetails = () => {
   const [showDetails, setShowDetails] = useState<boolean>(false);
@@ -22,6 +23,7 @@ export const GameDetails = () => {
         <GameDetail title="〓 Roll The Dice 〓" description={description} />
         <GameDetail title="〓 Roll The Dice 〓" description={description} />
         <GameDetail title="〓 Roll The Dice 〓" description={description} />
+        <img src={princeOfPersia} alt="Prince Of Persia" />
       </div>
       {/* type, className, id, size, hover = false, onClick, children, */}
       <div className="my-4 bg-epic-black">

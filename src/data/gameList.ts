@@ -69,6 +69,7 @@ export interface IGamesDeluxe {
   linkText?: string;
 }
 
+export { princeOfPersia };
 export const gamesDeluxe: IGamesDeluxe[] = [
   {
     id: 1,
