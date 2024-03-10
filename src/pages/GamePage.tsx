@@ -4,6 +4,7 @@ import { EpicgamesRating } from "../components/GameComponents/EpicgamesRating";
 import { FollowUs } from "../components/GameComponents/FollowUs";
 import { GameDetails } from "../components/GameComponents/GameDetails";
 import { GameNav } from "../components/GameComponents/GameNav";
+import { GameSidebar } from "../components/GameComponents/GameSidebar";
 import { GameTitle } from "../components/GameComponents/GameTitle";
 import { HyperLinkComponent } from "../components/pure/HyperLinkComponent";
 
@@ -12,7 +13,7 @@ export const GamePage = () => {
     <div className="w-full">
       <GameTitle />
       <GameNav />
-      <div className="md:grid md:grid-cols-12 gap-10 w-full">
+      <div className="flex flex-col-reverse md:grid md:grid-cols-12 gap-10 w-full">
         <div className="md:col-span-8">
           <CarouselGame />
           <div className="my-8">
@@ -65,7 +66,9 @@ export const GamePage = () => {
           </div>
           <GameDetails />
         </div>
-        <div className="col-span-4 w-full h-10"></div>
+        <div className="col-span-4 w-full h-full">
+          <GameSidebar />
+        </div>
       </div>
       <div className="w-full xl:w-8/12">
         <FollowUs />

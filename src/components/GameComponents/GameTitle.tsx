@@ -2,7 +2,7 @@ import { RatingStars } from "../pure/RatingStars";
 
 export const GameTitle = () => {
   return (
-    <div className="my-2">
+    <div className="mt-2">
       <span className="text-3xl">Dragonheir: Silent Gods</span>
       <div className="my-2 flex gap-4">
         <div className="flex gap-2 items-center">
