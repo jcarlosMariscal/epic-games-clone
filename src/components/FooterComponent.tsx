@@ -1,7 +1,17 @@
 import { FaFacebook, FaTwitter, FaYoutube, FaChevronUp } from "react-icons/fa";
 import epicLogo from "@/assets/epicgames-logo-light.svg";
+import UELogoWhite from "@/assets/ue-logo-white.svg";
 import { HyperLinkComponent } from "./pure/HyperLinkComponent";
 export const FooterComponent = () => {
+  const handleClick = () => {
+    // const scrolled = window.pageYOffset;
+    // console.log(scrolled);
+    window.scrollBy(0, -10000);
+    // if (window.pageYOffset > 0) {
+    //   window.scrollBy(0, -80);
+    //   setTimeout(handleClick, 0);
+    // }
+  };
   return (
     <div className="bg-epic-gray-100 text-white flex justify-center">
       <div className="py-8 w-full lg:w-11/12 px-6 lg:px-1">
@@ -17,12 +27,12 @@ export const FooterComponent = () => {
               <FaYoutube />
             </HyperLinkComponent>
           </div>
-          <HyperLinkComponent
-            type="hover"
-            className="text-xl opacity-80 size-9 border-2 flex items-center justify-center"
+          <a
+            className="text-xl opacity-80 size-9 border-2 flex items-center justify-center hover:text-epic-blue-100 btn-transition cursor-pointer"
+            onClick={handleClick}
           >
             <FaChevronUp />
-          </HyperLinkComponent>
+          </a>
         </div>
         <div className="w-full my-4">
           <span className="block text-sm opacity-50 my-2">Resources</span>
@@ -117,14 +127,20 @@ export const FooterComponent = () => {
             </HyperLinkComponent>
           </div>
           <div className="flex gap-2">
-            <div className="opacity-60">
+            <div className="opacity-60 hover:opacity-100 cursor-pointer">
               <img
                 src={epicLogo}
                 alt="EpicGames Logo"
                 className="size-[1.9rem]"
               />
             </div>
-            <div className="size-8 border rounded-full"></div>
+            <div className="opacity-60 hover:opacity-100 cursor-pointer">
+              <img
+                src={UELogoWhite}
+                alt="Unreal Engine Logo"
+                className="size-[1.9rem]"
+              />
+            </div>
           </div>
         </div>
       </div>
