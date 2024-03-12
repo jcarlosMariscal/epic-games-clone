@@ -28,7 +28,9 @@ export const NavBarPrimary = () => {
     document.body.style.overflow = menuActive ? "auto" : "hidden";
   };
   const transitionLogo = menuActive ? "translate-x-[-6.5rem]" : "";
-  const transitionMenu = menuActive ? "" : "translate-y-[-100%] xl:translate-0";
+  const transitionMenu = menuActive
+    ? ""
+    : "translate-y-[-100%] xl:translate-y-0";
   return (
     <div className="background-gray h-[4.5rem] px-6 !w-full flex items-center xl:flex-center">
       <div className="flex gap-6">

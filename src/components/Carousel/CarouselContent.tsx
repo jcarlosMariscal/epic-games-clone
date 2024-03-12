@@ -25,13 +25,13 @@ export const CarouselContent = ({ game }: TGame) => {
         <a className="absolute-full text-md">
           <div className="absolute-full bg-epic-black opacity-40 z-10"></div>
           <div className="absolute-full z-20">
-            <div className="w-4/6 h-full p-7 flex flex-col justify-end">
+            <div className="w-full md:w-4/6 h-full p-7 flex flex-col justify-end">
               <img
                 className="w-[8rem] xl:w-60 h-auto pointer-events-none"
                 src={logo}
               ></img>
               <p className="mt-4 text-xs md:text-md">{status}</p>
-              <p className="mt-2">{description}</p>
+              <p className="text-sm md:text-md mt-2">{description}</p>
               {price && <p className="mt-6 text-xs md:text-md">{price}</p>}
               <div className="hidden md:flex gap-1 mt-2">
                 <ButtonComponent

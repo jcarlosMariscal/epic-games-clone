@@ -23,7 +23,7 @@ export const CarouselContentSmall = ({
   const style: TStyle = {
     size: {
       md: "h-[9rem] md:h-[13rem] p-5 bg-epic-gray-100 rounded-md",
-      lg: "w-full h-[30rem] md:h-[16rem]",
+      lg: "w-full h-[16rem] ssm:h[20rem] sm:h-[30rem] md:h-[16rem]",
     },
     img: {
       md: "w-full h-[4rem] md:h-[8rem]",

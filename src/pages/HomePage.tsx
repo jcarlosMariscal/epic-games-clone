@@ -50,6 +50,69 @@ export const HomePage = () => {
       <CarouselTops />
       <OtherComponent />
       <CarouselTitle title="Trending" button={true} buttonText="VIEW MORE" />
+      <CarouselTops />
+      <OtherGames />
+      <CarouselSecond
+        title="Most Popular"
+        size="lg"
+        slidesPerView={1.4}
+        spaceBetween={12}
+        breakpoints={{
+          640: {
+            slidesPerView: 1,
+            spaceBetween: 12,
+          },
+          768: {
+            slidesPerView: 4,
+            spaceBetween: 12,
+          },
+          1024: {
+            slidesPerView: 5,
+            spaceBetween: 12,
+          },
+        }}
+      />
+      <CarouselSecond
+        title="Recently Updated"
+        size="lg"
+        slidesPerView={1.4}
+        spaceBetween={12}
+        breakpoints={{
+          640: {
+            slidesPerView: 1,
+            spaceBetween: 12,
+          },
+          768: {
+            slidesPerView: 4,
+            spaceBetween: 12,
+          },
+          1024: {
+            slidesPerView: 5,
+            spaceBetween: 12,
+          },
+        }}
+      />
+      <CarouselSecond
+        title="Now On The Epic Games Store"
+        size="lg"
+        slidesPerView={1.4}
+        spaceBetween={12}
+        breakpoints={{
+          640: {
+            slidesPerView: 1,
+            spaceBetween: 12,
+          },
+          768: {
+            slidesPerView: 4,
+            spaceBetween: 12,
+          },
+          1024: {
+            slidesPerView: 5,
+            spaceBetween: 12,
+          },
+        }}
+      />
+      <OtherGames />
     </div>
   );
 };

@@ -44,6 +44,10 @@ export const CarouselMain = () => {
           slidesPerView={1.2}
           breakpoints={{
             640: {
+              slidesPerView: 1.2,
+              spaceBetween: 10,
+            },
+            770: {
               slidesPerView: 1,
               spaceBetween: 10,
             },
@@ -60,7 +64,6 @@ export const CarouselMain = () => {
           {gameCarousel.map((game) => (
             <SwiperSlide key={game.id}>
               <div className="relative h-full">
-                <img src={`${game.images.image}`} className="absolute-full" />
                 <CarouselContent game={game} />
               </div>
             </SwiperSlide>
