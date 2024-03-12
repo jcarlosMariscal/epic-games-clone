@@ -13,11 +13,12 @@ type Style = {
 };
 export const NavLinks = ({ navigation, navbar }: Navigation) => {
   const style: Style = {
-    primary: "hover:bg-epic-gray-50 text-sm px-4 opacity-text",
+    primary:
+      "bg-epic-gray-100 xl:bg-transparent hover:bg-epic-gray-50 text-sm py-7 xl:py-0 px-4 opacity-text",
     secondary: "!p-0 mx-5 text-sm opacity-text",
   };
   return (
-    <nav className="flex-center gap-1">
+    <nav className="flex flex-col xl:flex-row gap-4 xl:gap-1 xl:flex-center order-1 xl:order-none">
       {navigation.map((item, index) => (
         <LinkComponent
           key={index}

@@ -39,7 +39,7 @@ export const LinkComponent = ({
   return (
     <NavLink
       to={to}
-      className={`${style.sizes[size]} ${className} flex-center btn-transition`}
+      className={`${style.sizes[size]} ${className} flex items-center xl:flex-center btn-transition`}
       style={({ isActive }) => {
         return {
           background:

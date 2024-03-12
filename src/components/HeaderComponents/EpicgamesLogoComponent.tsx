@@ -6,7 +6,7 @@ import epicLogo from "@/assets/epicgames-logo-light.svg";
 
 export const EpicgamesLogoComponent = () => {
   return (
-    <Menu as="div" className="relative inline-block text-right z-50">
+    <Menu as="div" className="relative inline-block text-right z-30">
       <div>
         <Menu.Button className="flex justify-between text-sm items-center gap-3 menu-dropdown">
           <img src={epicLogo} alt="EpicGames Logo" className="size-[1.9rem]" />

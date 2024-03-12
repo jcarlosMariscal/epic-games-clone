@@ -74,6 +74,11 @@
   .a-icon-translate {
     @apply text-2xl opacity-60 hover:opacity-100 cursor-pointer hover:translate-y-[-.05rem];
   }
+
+  /* HEADER */
+  .menu-mobile {
+    @apply absolute z-40 top-0 left-[0rem] bottom-0 bg-epic-black transition-transform duration-500 py-[6rem] px-6 w-full flex flex-col;
+  }
 }
 @tailwind utilities;
 .menu-dropdown .icon-dropdown {

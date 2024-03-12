@@ -20,7 +20,7 @@ const navigation = [
 ];
 export const NavBarSecondary = () => {
   return (
-    <div className="background-dark h-24 flex-center sticky top-0 z-40">
+    <div className="background-dark h-24 flex-center sticky top-0 z-30">
       <div className="w-9/12 flex items-center gap-4">
         <InputSearch
           placeholder="Search Store"
