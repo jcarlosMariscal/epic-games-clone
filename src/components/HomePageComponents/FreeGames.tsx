@@ -39,6 +39,7 @@ export const FreeGames = () => {
               image={game.image}
               roundedImg="rounded-t-md"
               button={false}
+              buttonTo="/"
             />
             <div
               className={`${

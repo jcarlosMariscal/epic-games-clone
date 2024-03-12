@@ -35,6 +35,7 @@ export const CarouselTitle = ({
         {games.map((game, index) => (
           <div className="flex flex-col" key={index}>
             <HoverImage
+              buttonTo="/"
               className="!w-full"
               image={game.image}
               roundedImg="rounded-md"

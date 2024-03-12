@@ -31,7 +31,6 @@ export const DeluxeEdition = () => {
               roundedImg="rounded-2xl"
               button={true}
               buttonTo="/"
-              redirectTo="/"
             />
             <div className="my-4">
               <p>{game.title}</p>

@@ -43,7 +43,6 @@ export const TopGames = ({ title, condi }: TTopGames) => {
             roundedImg="rounded-md"
             button={true}
             buttonTo="/"
-            redirectTo="/"
           >
             <div className="flex flex-col justify-center">
               <p className="text-sm">{game.title}</p>

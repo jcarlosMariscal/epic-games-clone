@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore from "swiper";
 import {
@@ -17,24 +17,16 @@ export const CarouselMain = () => {
   const [thumbsSwiper, setThumbsSwiper] = useState<SwiperCore>();
   const [firstSwiper] = useState();
   const [secondSwiper] = useState();
-  const swiper1Ref = useRef<React.MutableRefObject<null>>(null);
-  // const swiper2Ref = useRef();
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const handleSlideChange = (swiper: TSwiper) => {
     setCurrentIndex(swiper.activeIndex);
-    console.log(swiper);
   };
 
   return (
     <div className="flex flex-col md:grid md:grid-cols-10 !gap-3 h-[60%]">
       <div className="md:col-span-8 h-full">
         <Swiper
-          onSwiper={(swiper) => {
-            if (swiper1Ref.current !== null) {
-              swiper1Ref.current = swiper;
-            }
-          }}
           controller={{ control: secondSwiper }}
           autoplay={{
             delay: 7000,
