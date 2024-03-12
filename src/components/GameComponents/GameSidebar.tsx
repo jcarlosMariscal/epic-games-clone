@@ -5,7 +5,7 @@ import { ButtonComponent } from "../pure/ButtonComponent";
 import { TiVendorMicrosoft } from "react-icons/ti";
 import { MdShare } from "react-icons/md";
 import { FaFlag } from "react-icons/fa";
-import { princeOfPersia } from "../../data/gameList";
+import { frostpunk2 } from "../../data/gameList";
 
 export const GameSidebar = () => {
   const handleClick = () => {};
@@ -17,11 +17,7 @@ export const GameSidebar = () => {
           alt="Dragonheir Logo"
           className="hidden md:block"
         />
-        <img
-          src={princeOfPersia}
-          alt="PrinceOfPersia"
-          className="block md:hidden"
-        />
+        <img src={frostpunk2} alt="Frost punk 2" className="block md:hidden" />
       </div>
       <div className="border border-epic-gray-100 border-opacity-80 rounded-md flex gap-4 p-4 hover:bg-epic-gray-50 cursor-pointer transition">
         <div className="w-1/6">

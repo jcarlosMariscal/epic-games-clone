@@ -50,7 +50,8 @@ export const LinkComponent = ({
                   : ""
                 : ""
               : "",
-          color: isActive ? (pathname !== "/" ? "white" : "") : "",
+          // color: isActive ? (pathname !== "/" ? "white" : "") : "",
+          color: isActive ? "white" : "",
         };
       }}
     >

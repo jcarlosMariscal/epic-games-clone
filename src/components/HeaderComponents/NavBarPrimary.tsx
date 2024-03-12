@@ -12,14 +12,14 @@ const navigation = [
     to: "/distribution",
     // current: location.pathname === "/"
   },
-  {
-    name: "Support",
-    to: "/",
-  },
-  {
-    name: "Unreal Engine",
-    to: "/",
-  },
+  // {
+  //   name: "Support",
+  //   to: "/",
+  // },
+  // {
+  //   name: "Unreal Engine",
+  //   to: "/",
+  // },
 ];
 export const NavBarPrimary = () => {
   const [menuActive, setMenuActive] = useState<boolean>(false);

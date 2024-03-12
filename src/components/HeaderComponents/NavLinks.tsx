@@ -30,6 +30,20 @@ export const NavLinks = ({ navigation, navbar }: Navigation) => {
           {item.name}
         </LinkComponent>
       ))}
+      {navbar === "primary" && (
+        <>
+          <span
+            className={`block ${style.primary} w-auto h-8 rounded-md flex items-center cursor-pointer`}
+          >
+            Support
+          </span>
+          <span
+            className={`block ${style.primary} w-auto h-8 rounded-md flex items-center cursor-pointer`}
+          >
+            Unreal Engine
+          </span>
+        </>
+      )}
     </nav>
   );
 };

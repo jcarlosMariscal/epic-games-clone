@@ -1,32 +1,34 @@
-import skullAndBones from "@/assets/images/games/skull-and-bones-premium-edition-desktop.jpg";
+import expeditions from "@/assets/images/games/expeditions-desktop.jpg";
+import expeditionsThumb from "@/assets/images/games/expeditions-thumb.jpg";
+import expeditionsLogo from "@/assets/images/games/expeditions-logo.png";
+import expeditionsMobile from "@/assets/images/games/expeditions-mobile.jpg";
+import deadByDaylight from "@/assets/images/games/dead-by-daylight-all-things-wicked-desktop.jpg";
+import deadByDaylightThumb from "@/assets/images/games/dead-by-daylight-all-things-wicked-thumb.jpg";
+import deadByDaylightLogo from "@/assets/images/games/dead-by-daylight-all-things-wicked-logo.png";
+import deadByDaylightMobile from "@/assets/images/games/dead-by-daylight-all-things-wicked-mobile.jpg";
+import fortnitec5s2 from "@/assets/images/games/fortnite-c5s2-desktop.jpeg";
+import fortnitec5s2Thumb from "@/assets/images/games/fortnite-c5s2-thumb.jpg";
+import fortnitec5s2Logo from "@/assets/images/games/fortnite-c5s2-logo.png";
+import fortnitec5s2Mobile from "@/assets/images/games/fortnite-c5s2-mobile.jpg";
+import farHorizon from "@/assets/images/games/far-horizon-desktop.jpg";
+import farHorizonThumb from "@/assets/images/games/far-horizon-thumb.jpg";
+import farHorizonLogo from "@/assets/images/games/far-horizon-logo.png";
+import farHorizonMobile from "@/assets/images/games/far-horizon-mobile.jpg";
 import banishers from "@/assets/images/games/banishers-ghosts-of-new-eden-desktop.jpg";
-import princeOfPersia from "@/assets/images/games/prince-of-persia-lost-crown-desktop.jpg";
-import honkaiStarRail from "@/assets/images/games/honkai-star-rail-version-2-0-desktop.jpg";
-import outriders from "@/assets/images/games/outriders-complete-edition-desktop.jpg";
-import homeworld3 from "@/assets/images/games/homeworld-3-desktop.jpg";
-import skullAndBonesThumb from "@/assets/images/games/skull-and-bones-premium-edition-thumb.jpg";
 import banishersThumb from "@/assets/images/games/banishers-ghosts-of-new-eden-thumb.jpg";
-import princeOfPersiaThumb from "@/assets/images/games/prince-of-persia-lost-crown-thumb.jpg";
-import honkaiStarRailThumb from "@/assets/images/games/honkai-star-rail-version-2-0-thumb.jpg";
-import outridersThumb from "@/assets/images/games/outriders-complete-edition-thumb.jpg";
-import homeworld3Thumb from "@/assets/images/games/homeworld-3-thumb.jpg";
-import skullAndBonesLogo from "@/assets/images/games/skull-and-bones-premium-edition-logo.png";
 import banishersLogo from "@/assets/images/games/banishers-ghosts-of-new-eden-logo.png";
-import princeOfPersiaLogo from "@/assets/images/games/prince-of-persia-lost-crown-logo.png";
-import honkaiStarRailLogo from "@/assets/images/games/honkai-star-rail-version-2-0-logo.png";
-import outridersLogo from "@/assets/images/games/outriders-complete-edition-logo.png";
-import homeworld3Logo from "@/assets/images/games/homeworld-3-logo.png";
-import skullAndBonesMobile from "@/assets/images/games/skull-and-bones-premium-edition-mobile.jpg";
 import banishersMobile from "@/assets/images/games/banishers-ghosts-of-new-eden-mobile.jpg";
-import princeOfPersiaMobile from "@/assets/images/games/prince-of-persia-lost-crown-mobile.jpg";
-import honkaiStarRailMobile from "@/assets/images/games/honkai-star-rail-version-2-0-mobile.jpg";
-import outridersMobile from "@/assets/images/games/outriders-complete-edition-mobile.jpg";
-import homeworld3Mobile from "@/assets/images/games/homeworld-3-mobile.jpg";
-import theLamplightherDeluxe from "@/assets/images/deluxe/dotw-the-lamplighers-league-breaker.jpg";
-import DisciplesDeluxe from "@/assets/images/deluxe/dotw-disciples-liberation-deluxe-edition-breaker.jpg";
+import frostpunk2 from "@/assets/images/games/frostpunk2-desktop.jpg";
+import frostpunk2Thumb from "@/assets/images/games/frostpunk2-thumb.jpg";
+import frostpunk2Logo from "@/assets/images/games/frostpunk2-logo.png";
+import frostpunk2Mobile from "@/assets/images/games/frostpunk2-mobile.jpg";
+
+import aftermathDeluxe from "@/assets/images/deluxe/dotw-wwz-aftermath-deluxe-edition-breaker.jpg";
+import toolsUpUltimateDeluxe from "@/assets/images/deluxe/dotw-tools-up-ultimate-edition-breaker.jpg";
 import salesSpecialDeluxe from "@/assets/images/deluxe/sales-specials-dotw-breaker-asset.jpg";
-import dakarDesertRally from "@/assets/images/freegames/DakarDesertRally_SaberPortoLtd.avif";
-import superMeatBoyForever from "@/assets/images/freegames/SuperMeatBoyForever_TeamMeat.jpg";
+import astroDuel2 from "@/assets/images/freegames/astro-duel-2.avif";
+import deusEX from "@/assets/images/freegames/deus-ex--mankind-divided.avif";
+import wideTheBridge from "@/assets/images/freegames/Wide_TheBridge.avif";
 
 export type Images = {
   image: string;
@@ -69,23 +71,23 @@ export interface IGamesDeluxe {
   linkText?: string;
 }
 
-export { princeOfPersia };
+export { frostpunk2 };
 export const gamesDeluxe: IGamesDeluxe[] = [
   {
     id: 1,
-    title: "The Lamplighters League",
-    image: theLamplightherDeluxe,
-    price: "899",
-    discount: "-40%",
-    discountPrice: "539.40",
+    title: "World War Z: Aftermath - Deluxe Edition",
+    image: aftermathDeluxe,
+    price: "599.99",
+    discount: "-50%",
+    discountPrice: "279.99",
   },
   {
     id: 2,
-    title: "Disciples: Liberation Digital Deluxe Edition",
-    image: DisciplesDeluxe,
-    price: "559.99",
-    discount: "-50%",
-    discountPrice: "289.99",
+    title: "Tools Up! Ultimate Edition",
+    image: toolsUpUltimateDeluxe,
+    price: "312.99",
+    discount: "-80%",
+    discountPrice: "62.59",
   },
   {
     id: 3,
@@ -100,22 +102,69 @@ export const gamesDeluxe: IGamesDeluxe[] = [
 export const gameCarousel: IGameCarousel[] = [
   {
     id: 1,
-    title: "Skull and Bones",
+    title: "Expeditions: A MudRunner Game",
     images: {
-      image: skullAndBones,
-      thumb: skullAndBonesThumb,
-      logo: skullAndBonesLogo,
-      mobile: skullAndBonesMobile,
+      image: expeditions,
+      thumb: expeditionsThumb,
+      logo: expeditionsLogo,
+      mobile: expeditionsMobile,
     },
-    status: "EARLY ACCESS NOW AVAILABLE",
+    status: "NOW AVAILABLE",
     description:
-      "Purchase Premium Edition to start playing inmediately and receive in-game content and the digital art book/soundtrack.",
-    price: "",
+      "Embark on scientific ecpeditions with this new off-road adventure from the creators of MudRunner and SnowRunner.",
+    price: "Starting at MX$499.99",
     buttonOne: "BUY NOW",
     buttonTwo: "ADD TO WISH LIST",
   },
   {
     id: 2,
+    title: "Dead by Daylight",
+    images: {
+      image: deadByDaylight,
+      thumb: deadByDaylightThumb,
+      logo: deadByDaylightLogo,
+      mobile: deadByDaylightMobile,
+    },
+    status: "All Things Wicked",
+    description: "Face the unknown in Dead by Daylight's All Things Wicked",
+    price: "Starting at MX$104.85",
+    buttonOne: "BUY NOW",
+    buttonTwo: "ADD TO WISH LIST",
+  },
+  {
+    id: 3,
+    title: "Fortnite",
+    images: {
+      image: fortnitec5s2,
+      thumb: fortnitec5s2Thumb,
+      logo: fortnitec5s2Logo,
+      mobile: fortnitec5s2Mobile,
+    },
+    status: "NEW SEASON",
+    description:
+      "Olympian legends rule the Island. Use their mytholocical means against them in Chapter 5 Season 2: Myths & Mortals!",
+    price: "Free",
+    buttonOne: "BUY NOW",
+    buttonTwo: "ADD TO WISH LIST",
+  },
+  {
+    id: 4,
+    title: "Far Horizon",
+    images: {
+      image: farHorizon,
+      thumb: farHorizonThumb,
+      logo: farHorizonLogo,
+      mobile: farHorizonMobile,
+    },
+    status: "FROM EPIC FIRST RUN",
+    description:
+      "Embark on an epic adventure of exploration, ingenuity, and survival as you loot, shoot, and craft to forge your destiny.",
+    price: "Starting at MX$267.99",
+    buttonOne: "BUY NOW",
+    buttonTwo: "ADD TO WISH LIST",
+  },
+  {
+    id: 5,
     title: "Banishers: Ghosts of New Eden",
     images: {
       image: banishers,
@@ -131,66 +180,19 @@ export const gameCarousel: IGameCarousel[] = [
     buttonTwo: "",
   },
   {
-    id: 3,
-    title: "Prince of Persia The Lost Crown",
-    images: {
-      image: princeOfPersia,
-      thumb: princeOfPersiaThumb,
-      logo: princeOfPersiaLogo,
-      mobile: princeOfPersiaMobile,
-    },
-    status: "OUT NOW",
-    description:
-      "Dash into a stylish and thrilling action-adventure platformer set in a mythological Persian world.",
-    price: "Starting at MX$999.00",
-    buttonOne: "BUY NOW",
-    buttonTwo: "ADD TO WISH LIST",
-  },
-  {
-    id: 4,
-    title: "Honkai Star Rail",
-    images: {
-      image: honkaiStarRail,
-      thumb: honkaiStarRailThumb,
-      logo: honkaiStarRailLogo,
-      mobile: honkaiStarRailMobile,
-    },
-    status: "VERSION 2.0",
-    description: '"If One Dreams At Midnight" released!',
-    price: "Free",
-    buttonOne: "BUY NOW",
-    buttonTwo: "ADD TO WISH LIST",
-  },
-  {
-    id: 5,
-    title: "OUTRIDERS COMPLETE EDITION",
-    images: {
-      image: outriders,
-      thumb: outridersThumb,
-      logo: outridersLogo,
-      mobile: outridersMobile,
-    },
-    status: "NOW AVAILABLE",
-    description:
-      "Get the complete experience now. Includes all the released content for OUTRIDERS.",
-    price: "Starting at MX$550.00",
-    buttonOne: "BUY NOW",
-    buttonTwo: "ADD TO WISH LIST",
-  },
-  {
     id: 6,
-    title: "Homeworld 3",
+    title: "Frostpunk 2",
     images: {
-      image: homeworld3,
-      thumb: homeworld3Thumb,
-      logo: homeworld3Logo,
-      mobile: homeworld3Mobile,
+      image: frostpunk2,
+      thumb: frostpunk2Thumb,
+      logo: frostpunk2Logo,
+      mobile: frostpunk2Mobile,
     },
-    status: "AVAILABLE MARCH 8, 2024",
+    status: "COMING JULY 25",
     description:
-      "Tactical, beautiful, and wholly unique, the GOTY-winning sci-fi RTS returns with Homeworld 3.",
+      "Discover a city-survival game set 30 years afeter an apocalyptic ravaged Earth.",
     price: "Starting at MX$999.99",
-    buttonOne: "PRE PURCHASE NOW",
+    buttonOne: "WISHLIST NOW",
     buttonTwo: "ADD TO WISH LIST",
   },
 ];
@@ -202,8 +204,8 @@ const gameList: IGame[] = [
   {
     id: 1,
     title: "skullAndBones",
-    image: skullAndBones,
-    thumb: skullAndBonesThumb,
+    image: expeditions,
+    thumb: expeditionsThumb,
     status: "Out Now",
     description:
       "skullAndBones is an immersive first-person action game that casts you as a supernatural assassin driven by revenge.",
@@ -215,8 +217,8 @@ const gameList: IGame[] = [
   {
     id: 2,
     title: "Far Cry 6",
-    image: banishers,
-    thumb: banishersThumb,
+    image: deadByDaylight,
+    thumb: deadByDaylightThumb,
     status: "Coming October 7",
     description:
       "Welcome to Yara. Antón Castillo is intent on restoring his nation back to its former glory by any means, a revolution.",
@@ -226,8 +228,8 @@ const gameList: IGame[] = [
   {
     id: 3,
     title: "Assassins Creeds Valhalla",
-    image: princeOfPersia,
-    thumb: princeOfPersiaThumb,
+    image: fortnitec5s2,
+    thumb: fortnitec5s2Thumb,
     status: "Now Out",
     description:
       "Assassin's Creed Valhalla, Prepare for War Amid Sigrblot Season! Sharpen your axe and grab your one-handed sword to prepare for The Siege of Paris",
@@ -239,8 +241,8 @@ const gameList: IGame[] = [
   {
     id: 4,
     title: "Little Nightmare",
-    image: honkaiStarRail,
-    thumb: honkaiStarRailThumb,
+    image: farHorizon,
+    thumb: farHorizonThumb,
     status: "Now Out",
     description:
       "Immerse yourself in Little Nightmares, a dark whimsical tale that will confront you with your childhood fears! Help Six escape The Maw",
@@ -249,20 +251,20 @@ const gameList: IGame[] = [
   },
   {
     id: 5,
-    title: "outriders 2042",
-    image: outriders,
-    thumb: outridersThumb,
-    status: "PRE-LOAD NOW AVAILABLE",
+    title: "Far Cry 6",
+    image: banishers,
+    thumb: banishersThumb,
+    status: "Coming October 7",
     description:
-      "Don't miss a moment of the outriders 2042 Open Beta, start your pre-load now!",
-    price: "659.000",
-    studio: "Electronic Arts",
+      "Welcome to Yara. Antón Castillo is intent on restoring his nation back to its former glory by any means, a revolution.",
+    price: "619.190",
+    studio: "Ubisoft",
   },
   {
     id: 6,
     title: "homeworld3 bridge of spirits",
-    image: homeworld3,
-    thumb: homeworld3Thumb,
+    image: frostpunk2,
+    thumb: frostpunk2Thumb,
     status: "OUT NOW",
     description:
       "homeworld3, a young Spirit Guide, travels to an abandoned village in search of the sacred mountain shrine.",
@@ -292,17 +294,24 @@ interface IFreeGames {
 export const freeGames: IFreeGames[] = [
   {
     id: 1,
-    title: "Dakar Desert Rally",
-    image: dakarDesertRally,
+    title: "Astro Duel 2",
+    image: astroDuel2,
     freeNow: true,
-    rangeDate: "Free Now - Feb 22 at 10:00 AM",
+    rangeDate: "Free Now - Mar 14 at 10:00 AM",
   },
   {
     id: 2,
-    title: "Super Meat Boy Forever",
-    image: superMeatBoyForever,
+    title: "Deus Ex - Mankind Divided",
+    image: deusEX,
     freeNow: false,
-    rangeDate: "Free Feb 22 - Feb 29",
+    rangeDate: "Free Mar 14 - Mar 21",
+  },
+  {
+    id: 3,
+    title: "The Bridge",
+    image: wideTheBridge,
+    freeNow: false,
+    rangeDate: "Free Mar 14 - Mar 21",
   },
 ];
 
