@@ -2,7 +2,7 @@ import { DropdownEpicgamesItem } from "./DropdownEpicgamesItem";
 
 export const DropdownEpicgames = () => {
   return (
-    <div className="p-10 text-left grid grid-cols-1 xl:grid-cols-2 gap-6">
+    <div className="p-10 text-left grid grid-cols-1 xl:grid-cols-2 gap-6 !z-40">
       <div className="flex flex-col gap-8 ">
         <div className="">
           <span className="text-xl font-bold">Play</span>
