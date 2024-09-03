@@ -1,6 +1,6 @@
 # Epic Games Store Clone [Frontend]
 
-Clon de la interfaz de Epic Games Store con React + Typescript + Vite
+Clon de la interfaz de Epic Games Store con React + Typescript + Vite.
 
 ## Tecnologías usadas:
 
